@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+html {
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Lato', sans-serif;
+}
+
+* p, * li {
+  font-weight: 500;
+}
+
+#top-bar {
+  background-color: #ff6b28;
+  text-align: center;
+}
+
+#imagem {
+  width: 100%;
+  background: url(../images/hero_bolo.jpg) #ff6b28 center top;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 2em;
+  color: #ff6b28;
+}
+
+#receita {
+  padding: 100px 70px;
+}
+
+#ingredientes:hover {
+  cursor: url(../images/cursor_ingredientes.png), pointer;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: #ff6b28;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+li {
+  margin: 20px;
+}
+
+a {
+  background-color: #ff6b28;
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  cursor: url(../images/cursor_ingredientes.png), pointer;
+}
+
+#link {
+  padding: 15px;
+}
+
+ol {
+  list-style-position: inside;
+}
+
+#modo, #instrucoes {
+  margin-top: 200px;
+}
+
+#modo:hover {
+  cursor: url(../images/cursor_preparo.png), pointer;
+}
+
+#instrucoes p {
+  margin-top: 30px;
+  line-height: 24px;
+}
+
+#instrucoes:hover {
+  cursor: url(../images/cursor_intrucoes.png), pointer;
+}
+
+footer {
+  height: 70px;
+  background-color: #ff6b28;
+  text-align: center;
+  color: white;
+}
+
+footer p {
+  margin: auto;
+  padding-top: 15px; 
+  width: 500px;
+}
