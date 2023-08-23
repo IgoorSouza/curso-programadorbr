@@ -2,7 +2,7 @@
 
 /* Mobile */
 
-@media screen and (max-width: 1130px) {
+@media screen and (max-width: 1000px) {
   * {
     font-family: 'Open Sans', sans-serif;
     margin: 0px;
@@ -24,7 +24,7 @@
   header {
     margin: auto;
     text-align: center;
-    width: 90vw;
+    width: 82vw;
   }
   
   header h1 {
@@ -63,11 +63,15 @@
     color: rgb(209, 209, 209);
     padding-top: 5px;
   }
+
+  hr {
+    width: 80vw;
+  }
   
   #conteudo {
     margin: auto;
     padding-top: 40px; 
-    width: 80vw;
+    width: 70vw;
   }
   
   #conteudo p {
