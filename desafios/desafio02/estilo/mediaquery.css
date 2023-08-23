@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+/* Mobile */
+
+@media screen and (max-width: 1130px) {
+  * {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  * p {
+    color: #555;
+  }
+
+  #top-bar {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    border-bottom: 5px solid #fd8a24;
+    padding: 8px;
+  }
+
+  header {
+    margin: auto;
+    text-align: center;
+    width: 90vw;
+  }
+  
+  header h1 {
+    padding: 30px 0px;
+    font-size: 3.5em;
+    line-height: 64px;
+    color: #111;
+  }
+  
+  h2 {
+    font-size: 2em;
+    padding: 0 0 20px 10px;
+    color: #111;
+  }
+  
+  header p {
+    font-size: 1.2em;
+  }
+  
+  header img {
+    padding: 0px 20px 30px 0px;
+  }
+  
+  #dados {
+    padding: 30px 0px;
+    font-size: 0.8em;
+  }
+  
+  #dados p#autora {
+    font-weight: bold;
+    color: rgb(100, 95, 95);
+  }
+  
+  #dados p#data {
+    font-size: 0.9em;
+    color: rgb(209, 209, 209);
+    padding-top: 5px;
+  }
+  
+  #conteudo {
+    margin: auto;
+    padding-top: 40px; 
+    width: 80vw;
+  }
+  
+  #conteudo p {
+    line-height: 2em;
+    margin-bottom: 40px;
+    font-size: 1.3em;
+  }
+  
+  a {
+    color: #fd8a24;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  div.links {
+    padding-bottom: 40px;
+  }
+  
+  #conteudo img {
+    width: 100%;
+  }
+  
+  #conteudo figcaption {
+    padding-bottom: 40px;
+    font-size: 0.8em;
+  }
+  
+  a#link2:after {
+    color: rgb(100, 95, 95);
+    font-weight: normal;
+    content: 'Veja mais dicas no Fórum do TechTudo.'
+  }
+  
+  footer {
+    background-color: #333;
+    height: 100px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+
