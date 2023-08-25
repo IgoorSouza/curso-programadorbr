@@ -17,6 +17,10 @@
     text-align: center;
   }
 
+  #ingredientes {
+    width: 60vw;
+  }
+
   #modo, #instrucoes {
     width: 60vw;
     margin-top: 120px;

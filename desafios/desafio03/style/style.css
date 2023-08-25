@@ -36,10 +36,6 @@ h1 {
   padding: 100px 70px;
 }
 
-#ingredientes:hover {
-  cursor: url(../images/cursor_ingredientes.png), pointer;
-}
-
 h2 {
   font-size: 1.5em;
   color: #ff6b28;
@@ -68,6 +64,19 @@ a:hover {
 
 #link {
   padding: 15px;
+}
+
+#ingredientes, #modo, #instrucoes {
+  padding: 10px;
+}
+
+#ingredientes:hover, #modo:hover, #instrucoes:hover {
+  box-shadow: 8px 8px 15px 12px rgba(205, 205, 205, 0.25);
+  border-radius: 20px;
+}
+
+#ingredientes:hover {
+  cursor: url(../images/cursor_ingredientes.png), pointer;
 }
 
 ol {
