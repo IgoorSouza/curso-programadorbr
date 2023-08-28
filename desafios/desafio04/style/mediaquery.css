@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 750px) {
+  #form {
+    float: none;
+    margin: 0px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #info {
+    width: 88vw;
+    text-align: center;
+  }
+
+  #info p {
+    font-size: 1em;
+  }
+
+  img {
+    margin-right: 20px;
+  }
+}

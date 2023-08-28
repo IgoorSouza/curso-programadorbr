@@ -25,29 +25,42 @@
     <figcaption></figcaption> <!-- aqui vai a legenda da imagem -->
   </figure>
 
-  <!-- link para número de telefone: 
-       <a href="tel:+(numero)"></a>
+  <!-- 
+    link para número de telefone: 
+    <a href="tel:+(numero)"></a>
        
-       link para o app do Whatsapp: 
-       <a href="whatsapp://(numero)"></a>
+    link para o app do Whatsapp: 
+    <a href="whatsapp://(numero)"></a>
 
-       link para o app do Instagram:
-       <a href="instagram://"></a>  (abre o feed do Instagram)
-       <a href="instagram://user?username=(perfil)"></a> (abre o perfil especificado)
+    link para o app do Instagram:
+    <a href="instagram://"></a>  (abre o feed do Instagram)
+    <a href="instagram://user?username=(perfil)"></a> (abre o perfil especificado)
 
-       link para mandar email: 
-       <a href="mailto:(endereço de email)"></a>
+    link para mandar email: 
+    <a href="mailto:(endereço de email)"></a>
 
-       direcionar o usuário para algum conteúdo específico da página:
-       <a href="#(id atribuído ao conteúdo)"></a>
+    direcionar o usuário para algum conteúdo específico da página:
+    <a href="#(id atribuído ao conteúdo)"></a>
 
-       conteúdo em excesso ("vazando" do lugar onde deveria estar):
-       overflow/overflow-y/overflow-x: auto (adiciona automaticamente uma barra de rolagem)
-                                       scroll (adiciona um barra de rolagem)
-                                       hidden (esconde o conteúdo em excesso)
+    conteúdo em excesso ("vazando" do lugar onde deveria estar):
+    overflow/overflow-y/overflow-x: auto (adiciona automaticamente uma barra de rolagem) / scroll (adiciona um barra de rolagem) / hidden (esconde o conteúdo em excesso)
                                       
-      colocar imagem em lista não ordenada (a imagem PRECISA ser 16x16):
-      list-style-image: url('[...]');
+    colocar imagem em lista não ordenada (a imagem PRECISA ser 16x16):
+    list-style-image: url('[...]');
+      
+
+    Position
+    static: padrão, não permite uso de top, bottom, left, right.
+
+    Permitem uso de top, bottom, left, right:
+
+    relative: posição com base no posicionamento original do elemento. É como se o elemento definido como relative ainda estivesse ocupando seu espaço original, mesmo não estando nele.
+
+    absolute: se posiciona de acordo com o elemento pai, desde que este não tenha posicionamento static. Se o pai tiver posicionamento static, o elemento se posicionará em relação ao primeiro elemento não estático acima dele. É como se o elemento definido como absolute funcionasse de forma independente, sem afetar a posição de outros elementos.
+
+    fixed: mantém o elemento fixo em relação à viewport. O elemento é removido de sua posição original, funcionando de forma independente.
+
+    sticky: o elemento mantém seu posicionamento original, porém continua na tela caso saia da viewport.
   -->
   
 </body>
