@@ -1,0 +1,90 @@
+
+  negrito = <b> (formatação) e <strong> (semântica de destaque)
+  itálico = <i> (formatação) e <em> (semântica de destaque)
+  texto riscado = <del>
+  marca-texto = <mark>
+  letra pequena = <small>
+  texto mais "baixo" na linha = <sub>
+  texto que foi inserido na página (fica sublinhado) = <ins>
+
+  <figure> (tag usada para "agrupar" uma imagem com sua legenda)
+  <img src="" alt="">
+  <figcaption></figcaption> (aqui vai a legenda da imagem)
+  </figure>
+
+  link para número de telefone: 
+    <a href="tel:+(numero)"></a>
+       
+  link para o app do Whatsapp: 
+    <a href="whatsapp://(numero)"></a>
+
+  link para o app do Instagram:
+    <a href="instagram://"></a>  (abre o feed do Instagram)
+    <a href="instagram://user?username=(perfil)"></a> (abre o perfil especificado)
+
+  link para mandar email: 
+    <a href="mailto:(endereço de email)"></a>
+
+  direcionar o usuário para algum conteúdo específico da página:
+    <a href="#(id atribuído ao conteúdo)"></a>
+
+
+  conteúdo em excesso ("vazando" do lugar onde deveria estar):
+    overflow/overflow-y/overflow-x: auto (adiciona automaticamente uma barra de rolagem) / scroll (adiciona um barra de rolagem) / hidden (esconde o conteúdo em excesso)
+                              
+  colocar imagem em lista não ordenada (a imagem PRECISA ser 16x16):
+    list-style-image: url('[...]');
+    
+  Position
+    static: padrão, não permite uso de top, bottom, left, right.
+
+    Permitem uso de top, bottom, left, right:
+
+      relative: posição com base no posicionamento original do elemento. É como se o elemento definido como relative ainda estivesse ocupando seu espaço original, mesmo não estando nele.
+
+      absolute: se posiciona de acordo com o elemento pai, desde que este não tenha posicionamento static. Se o pai tiver posicionamento static, o elemento se posicionará em relação ao primeiro elemento não estático acima dele. É como se o elemento definido como absolute funcionasse de forma independente, sem afetar a posição de outros elementos.
+
+      fixed: mantém o elemento fixo em relação à viewport. O elemento é removido de sua posição original, funcionando de forma independente.
+
+      sticky: o elemento mantém seu posicionamento original, porém continua na tela caso saia da viewport.
+
+  Objetos
+
+    Declaração:
+      var (nome do objeto) = {propriedade: valor}
+        Ex.: var aluno = {nome: "Igor", nota1: 7.5}
+    
+    Acessando propriedades de um objeto:
+      (nome do objeto).(propriedade) / (nome do objeto)["(propriedade)"]
+        Ex.: aluno.nome / aluno["nome"]
+
+    Um objeto pode ter arrays dentro de si.
+      Ex.: var aluno = {notas[1.5, 2.0, 3.5]}
+      console.log(aluno.notas / aluno["notas"])= mostra todo o vetor "notas"
+      console.log(aluno.notas[x] / aluno["notas"][x]) = mostra um valor específico do vetor "notas"
+
+    Inserindo propriedades em um objeto já existente:
+      (nome do objeto).(nova propriedade) = (valor)
+      (nome do objeto)["(nova propriedade)"] = (valor)
+      var x = (nova propriedade) -> (nome do objeto).x = (valor)
+                                    (nome do objeto)[x] = (valor)
+
+    Funções em objetos (métodos):
+      var (nome do objeto) = {(propriedade que recebe o método) = function(){}}
+      Ex.: var objeto = {
+              media = function(n1, n2){
+                return (n1 + n2) / 2
+              }
+            }
+
+           OU
+
+           var objeto = {
+            media = calcMedia
+           }
+
+          function calcMedia(n1, n2) {
+            return (n1 + n2) / 2
+          }
+
+      elemento "this": se refere ao objeto em que ele está inserido. É usado nos métodos para 
