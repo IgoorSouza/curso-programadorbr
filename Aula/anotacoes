@@ -48,43 +48,85 @@
 
       sticky: o elemento mantém seu posicionamento original, porém continua na tela caso saia da viewport.
 
-  Objetos
+  JavaScript
 
-    Declaração:
-      var (nome do objeto) = {propriedade: valor}
-        Ex.: var aluno = {nome: "Igor", nota1: 7.5}
-    
-    Acessando propriedades de um objeto:
-      (nome do objeto).(propriedade) / (nome do objeto)["(propriedade)"]
-        Ex.: aluno.nome / aluno["nome"]
+    Objetos
 
-    Um objeto pode ter arrays dentro de si.
-      Ex.: var aluno = {notas[1.5, 2.0, 3.5]}
-      console.log(aluno.notas / aluno["notas"])= mostra todo o vetor "notas"
-      console.log(aluno.notas[x] / aluno["notas"][x]) = mostra um valor específico do vetor "notas"
+      Declaração:
+        var (nome do objeto) = {propriedade: valor}
+          Ex.: var aluno = {nome: "Igor", nota1: 7.5}
+      
+      Acessando propriedades de um objeto:
+        (nome do objeto).(propriedade) / (nome do objeto)["(propriedade)"]
+          Ex.: aluno.nome / aluno["nome"]
 
-    Inserindo propriedades em um objeto já existente:
-      (nome do objeto).(nova propriedade) = (valor)
-      (nome do objeto)["(nova propriedade)"] = (valor)
-      var x = (nova propriedade) -> (nome do objeto).x = (valor)
-                                    (nome do objeto)[x] = (valor)
+      Um objeto pode ter arrays dentro de si.
+        Ex.: var aluno = {notas[1.5, 2.0, 3.5]}
+        console.log(aluno.notas / aluno["notas"])= mostra todo o vetor "notas"
+        console.log(aluno.notas[x] / aluno["notas"][x]) = mostra um valor específico do vetor "notas"
 
-    Funções em objetos (métodos):
-      var (nome do objeto) = {(propriedade que recebe o método) = function(){}}
-      Ex.: var objeto = {
-              media = function(n1, n2){
-                return (n1 + n2) / 2
+      Inserindo propriedades em um objeto já existente:
+        (nome do objeto).(nova propriedade) = (valor)
+        (nome do objeto)["(nova propriedade)"] = (valor)
+        var x = (nova propriedade) -> (nome do objeto).x = (valor)
+                                      (nome do objeto)[x] = (valor)
+
+      Funções em objetos (métodos):
+        var (nome do objeto) = {(propriedade que recebe o método) = function(){}}
+        Ex.: var objeto = {
+                media = function(n1, n2){
+                  return (n1 + n2) / 2
+                }
               }
+
+            OU
+
+            var objeto = {
+              media = calcMedia
             }
 
-           OU
+            function calcMedia(n1, n2) {
+              return (n1 + n2) / 2
+            }
 
-           var objeto = {
-            media = calcMedia
-           }
+        elemento "this": se refere ao objeto em que ele está inserido. É usado nos métodos para 
 
-          function calcMedia(n1, n2) {
-            return (n1 + n2) / 2
-          }
+    document.getElementById("(id do elemento)")
+    document.getElementsByClassName("(class)") = forma um array com todos os elementos da classe especificada
+    document.getElementsByTagName("h1") = forma um array com todos os elementos da tag especificada
 
-      elemento "this": se refere ao objeto em que ele está inserido. É usado nos métodos para 
+    .innerHTML = conteúdo HTML do elemento (incluindo tags)
+    .innerText = apenas o texto que está sendo mostrado
+    .textContent = tudo aquilo que está dentro do texto
+
+    Modificando elementos HTML:
+      (elemento).(atributo) = "(valor)"
+        Ex.: p.style = "color:blue"
+        Ex.2: p.className = "paragrafo"
+
+    Acessando atributos de um elemento HTML:
+      (elemento).getAttribute("(atributo)")
+        Ex.: p.getAttribute("meuAtt")
+
+    Modificando ou adicionando atributos a um elemento HTML:
+      (elemento).setAttribute("(atributo)", "(valor)")
+        Ex.: p.setAttribute("meuAtt", "novo nome")
+
+    Modificando ou adicionando estilos CSS a um elemento HTML: 
+      (elemento).style.(tag CSS) = "(valor)"
+        Ex.: p.style.backgroundColor = "red"
+
+    Acessando os elementos filhos de um elemento pai:
+      (elemento).children = forma um array com todos os elementos filhos
+      (elemento).children[x] = pega um elemento específico do array de filhos
+
+    Acessando o elemento pai de um elemento filho:
+      (elemento).parentElement
+
+    *Biblioteca importante: Math
+
+    JSON:
+      JSON.stringify() = transforma um objeto em uma string
+      JSON.parse() = transforma uma string em um objeto
+
+    
