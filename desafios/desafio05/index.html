@@ -4,21 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/mediaquery.css">
   <title>Churras</title>
 </head>
 <body>
   <main>
-    <div>
+    <div id="header">
+      
+    </div>
+
+    <div id="conteudo">
       <h1>Bora um churras?</h1>
       <input type="number" placeholder="Adultos" id="adulto">
       <input type="number" placeholder="Crianças" id="crianca">
-      <input type="number" placeholder="Duração (h)" id="duracao">
+      <input type="number" placeholder="Duração (em horas)" id="duracao">
       <input type="button" value="Calcular" onclick="calc()">
-      
-      <div id="resultado"></div>
+
+      <div id="resultado">
+
+      </div>
     </div>
   </main>
-
+  <footer><p>Lembre-se: o verdadeiro churrasco são os amigos que fizemos pelo caminho!</p></footer>
   <script src="script/script.js"></script>
 </body>
 </html>
