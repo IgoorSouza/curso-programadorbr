@@ -126,7 +126,29 @@
     *Biblioteca importante: Math
 
     JSON:
+
       JSON.stringify() = transforma um objeto em uma string
       JSON.parse() = transforma uma string em um objeto
 
+    Local Storage (guarda os dados em uma string e os mantém mesmo após reiniciar a página):
+
+      localStorage.setItem("(chave)", "(string)") = guarda o dado
+
+      localStorage.getItem("(chave)") = busca o dado solicitado que foi guardado anteriormente
+
+      localStorage.removeItem("(chave)") = remove o dado da memória
+
+      localStorage.clear() = apaga toda a memória
+
+      OBS.: os dados só ficam disponíveis dentro de seu próprio domínio.
+      OBS2.: usar JSON para converter os dados que não são strings.
     
+    Temporizador e Intervalo:
+
+      Temporizador: setTimeout((funcao), tempo (em milissegundos)) = depois de disparado, executa uma função após o tempo determinado
+
+      Intervalo: setInterval((funcao), tempo (em milissegundos)) = depois de disparado, executa uma função repetidamente de acordo com o intervalo de tempo determinado
+
+      Interromper setTimeout: clearTimeout((variável correspondente ao timeout))
+
+      Interromper setInterval: clearInterval((variável correspondente ao interval))
