@@ -1,52 +1,62 @@
 
-  negrito = <b> (formatação) e <strong> (semântica de destaque)
-  itálico = <i> (formatação) e <em> (semântica de destaque)
-  texto riscado = <del>
-  marca-texto = <mark>
-  letra pequena = <small>
-  texto mais "baixo" na linha = <sub>
-  texto que foi inserido na página (fica sublinhado) = <ins>
+  HTML
 
-  <figure> (tag usada para "agrupar" uma imagem com sua legenda)
-  <img src="" alt="">
-  <figcaption></figcaption> (aqui vai a legenda da imagem)
-  </figure>
+    negrito = <b> (formatação) e <strong> (semântica de destaque)
+    itálico = <i> (formatação) e <em> (semântica de destaque)
+    texto riscado = <del>
+    marca-texto = <mark>
+    letra pequena = <small>
+    texto mais "baixo" na linha = <sub>
+    texto que foi inserido na página (fica sublinhado) = <ins>
 
-  link para número de telefone: 
-    <a href="tel:+(numero)"></a>
-       
-  link para o app do Whatsapp: 
-    <a href="whatsapp://(numero)"></a>
+    <figure> (tag usada para "agrupar" uma imagem com sua legenda)
+    <img src="" alt="">
+    <figcaption></figcaption> (aqui vai a legenda da imagem)
+    </figure>
 
-  link para o app do Instagram:
-    <a href="instagram://"></a>  (abre o feed do Instagram)
-    <a href="instagram://user?username=(perfil)"></a> (abre o perfil especificado)
+    link para número de telefone: 
+      <a href="tel:+(numero)"></a>
+        
+    link para o app do Whatsapp: 
+      <a href="whatsapp://(numero)"></a>
 
-  link para mandar email: 
-    <a href="mailto:(endereço de email)"></a>
+    link para o app do Instagram:
+      <a href="instagram://"></a>  (abre o feed do Instagram)
+      <a href="instagram://user?username=(perfil)"></a> (abre o perfil especificado)
 
-  direcionar o usuário para algum conteúdo específico da página:
-    <a href="#(id atribuído ao conteúdo)"></a>
+    link para mandar email: 
+      <a href="mailto:(endereço de email)"></a>
 
+    direcionar o usuário para algum conteúdo específico da página:
+      <a href="#(id atribuído ao conteúdo)"></a>
 
-  conteúdo em excesso ("vazando" do lugar onde deveria estar):
-    overflow/overflow-y/overflow-x: auto (adiciona automaticamente uma barra de rolagem) / scroll (adiciona um barra de rolagem) / hidden (esconde o conteúdo em excesso)
+    adicionar vídeo: 
+      <video src=""></video>
+        atributos: 
+          não precisam de valor: controls, autoplay, muted, loop,
+          precisam de valor: width, height, poster = src(""), preload = "auto" (inicia o carregamento do vídeo após a página carregar) / "none" (não carrega o vídeo enquanto o usuário não der play) / "metadata" (carrega apenas alguns dados sobre o vídeo)
+          Obs.: quando preload e autoplay são usados juntos, o autoplay possui prioridade
                               
-  colocar imagem em lista não ordenada (a imagem PRECISA ser 16x16):
-    list-style-image: url('[...]');
-    
-  Position
-    static: padrão, não permite uso de top, bottom, left, right.
+  CSS
 
-    Permitem uso de top, bottom, left, right:
+    conteúdo em excesso ("vazando" do lugar onde deveria estar):
+    overflow/overflow-y/overflow-x: auto (adiciona automaticamente uma barra de rolagem) / scroll (adiciona um barra de rolagem) / hidden (esconde o conteúdo em excesso)
 
-      relative: posição com base no posicionamento original do elemento. É como se o elemento definido como relative ainda estivesse ocupando seu espaço original, mesmo não estando nele.
+    colocar imagem em lista não ordenada (a imagem PRECISA ser 16x16):
+      list-style-image: url('[...]');
+      
+    Position
+      static: padrão, não permite uso de top, bottom, left, right.
 
-      absolute: se posiciona de acordo com o elemento pai, desde que este não tenha posicionamento static. Se o pai tiver posicionamento static, o elemento se posicionará em relação ao primeiro elemento não estático acima dele. É como se o elemento definido como absolute funcionasse de forma independente, sem afetar a posição de outros elementos.
+      Permitem uso de top, bottom, left, right:
 
-      fixed: mantém o elemento fixo em relação à viewport. O elemento é removido de sua posição original, funcionando de forma independente.
+        relative: posição com base no posicionamento original do elemento. É como se o elemento definido como relative ainda estivesse ocupando seu espaço original, mesmo não estando nele.
 
-      sticky: o elemento mantém seu posicionamento original, porém continua na tela caso saia da viewport.
+        absolute: se posiciona de acordo com o elemento pai, desde que este não tenha posicionamento static. Se o pai tiver posicionamento static, o elemento se posicionará em relação ao primeiro elemento não estático acima dele. É como se o elemento definido como absolute funcionasse de forma independente, sem afetar a posição de outros elementos.
+
+        fixed: mantém o elemento fixo em relação à viewport. O elemento é removido de sua posição original, funcionando de forma independente.
+
+        sticky: o elemento mantém seu posicionamento original, porém continua na tela caso saia da viewport.
 
   JavaScript
 
@@ -111,6 +121,9 @@
     Modificando ou adicionando atributos a um elemento HTML:
       (elemento).setAttribute("(atributo)", "(valor)")
         Ex.: p.setAttribute("meuAtt", "novo nome")
+        IMPORTANTE: quando for utilizar um atributo inventado, colocar 
+        "data-(atributo)" no HTML e selecioná-lo no JS utilizando (elemento).dataset.(atributo)
+          Ex.: HTML = <ul id="lista" data-num="5"></ul> / JS = lista.dataset.num
 
     Modificando ou adicionando estilos CSS a um elemento HTML: 
       (elemento).style.(tag CSS) = "(valor)"
@@ -152,3 +165,11 @@
       Interromper setTimeout: clearTimeout((variável correspondente ao timeout))
 
       Interromper setInterval: clearInterval((variável correspondente ao interval))
+
+    Vídeos
+      .play() = iniciar/continuar o vídeo;
+      .pause() = pausar o vídeo;
+      .currentTime = define ou retorna o momento atual do vídeo;
+      .playbackRate = velocidade de reprodução do vídeo;
+
+    
