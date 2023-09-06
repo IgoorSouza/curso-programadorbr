@@ -8,30 +8,48 @@ html {
 div {
   padding-top: 50px;
   margin: auto;
-  height: 530px;
+  height: 450px;
   text-align: center;
-}
-
+  }
+    
 img {
-  width: 550px;
-  transition-duration: 0.5s;
+  width: 450px;
 }
-
-img:hover {
-  width: 600px;
-}
-
+    
 h1 {
+  font-size: 25px;
   color: white;
   margin-bottom: 20px;
   font-weight: normal;
 }
-
+    
 h1#texto {
-  font-size: 40px;
+  font-size: 30px;
 }
-
+    
 a {
   color: white;
   text-decoration: underline;
+}
+
+@media screen and (min-width: 600px) {
+  div {
+    padding-top: 50px;
+    margin: auto;
+    height: 530px;
+    text-align: center;
+  }
+
+  img {
+    width: 550px;
+    transition-duration: 0.5s;
+  }
+
+  img:hover {
+    width: 600px;
+  }
+
+  h1#texto {
+    font-size: 40px;
+  }
 }
