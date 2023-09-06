@@ -77,13 +77,24 @@
           }
 
     Flexbox
-      display: flex = organiza os elementos filhos de acordo com o elemento pai
+      A propriedade flexbox torna os elementos flexíveis a fim de manter a organização dos elementos de acordo com aquilo que definido.
+
+      display: flex = organiza os elementos filhos de forma que possam ser contidos dentro do elemento pai, mesmo que seja necessário alterar seus tamanhos para isso
 
       flex-direction: 
-        row = os elementos formam colunas, ocupando somente a largura necessária para seu conteúdo porém toda a altura do elemento pai
-        row-reverse = similar ao row, porém a ordem dos elementos é invertida e os elementos são alocados para a direita
-        column = os elementos formam linhas, ocupando somente a altura necessária para seu conteúdo porém toda a largura do elemento pai
-        column-reverse = similar ao column, porém a ordem dos elementos é invertida e os elementos são alocados para a parte de baixo
+        row = o elemento que recebe "flex-direction: row" se comporta como uma grande linha, onde seus elementos filhos se organizam de forma a ficar dentro dessa linha. Para isso, cada elemento filho se torna uma coluna e, por padrão, irá ocupar toda a altura do elemento pai.
+
+        row-reverse = similar ao row, porém a ordem dos elementos é invertida e os elementos são alocados para a direita;
+
+        column = o elemento que recebe "flex-direction: column" se comporta como uma grande coluna, onde seus elementos filhos se organizam de forma a ficar dentro dessa coluna. Para isso, cada elemento filho se torna uma linha e, por padrão, irá ocupar toda a largura do elemento pai.
+
+        column-reverse = similar ao column, porém a ordem dos elementos é invertida e os elementos são alocados para a parte de baixo.
+
+      flex-wrap: wrap = mantém o tamanho definido dos elementos e forma mais linhas ou colunas para contê-los
+
+      flex-wrap: wrap-reverse = inverte a ordem das linhas ou colunas e as posiciona ao lado contrário do natural
+
+      flex-flow: (flex-direction flex-wrap) = redução das propriedades flex-direction e flex-wrap em uma só propriedade
 
   JavaScript
 
