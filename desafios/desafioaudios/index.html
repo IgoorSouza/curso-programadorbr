@@ -3,93 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teste</title>
-  <style>
-    html {
-      overflow-y: hidden;
-      background-image: linear-gradient(to right, #528ebb, #4442a8);
-    }
-
-    div {
-      padding-top: 50px;
-      margin: auto;
-      height: 550px;
-      text-align: center;
-    }
-
-    img {
-      width: 550px;
-      transition-duration: 1s;
-    }
-
-    img:hover {
-      width: 600px;
-    }
-
-    h1 {
-      color: white;
-      margin-bottom: 20px;
-    }
-
-    h1#texto {
-      font-size: 40px;
-    }
-    
-  </style>
+  <link rel="stylesheet" href="style/style.css">
+  <title>Bury the Light</title>
 </head>
 <body>
-  <div><img src="motivation.jpg" alt="Bury The Light" onclick="tocar()"></div>
+  <div>
+    <img src="media/motivation.jpg" alt="Bury The Light" onclick="tocar()">
+  </div>
+
   <div>
     <h1 id="texto">Clique na imagem para tocar a música!</h1>
-    <h1 onclick="drop()">Drop</h1>
-    <h1 onclick="reiniciar()">Reiniciar</h1>
+    <h1 onclick="drop()">Clique aqui para escutar o drop da música!</h1>
+    <h1 onclick="reiniciar()">Clique aqui para reiniciar a música!</h1>
+    <h1><a href="https://www.youtube.com/watch?v=Jrg9KxGNeJY&ab_channel=shadowhunter" target="_blank" rel="external" onclick="pause()">Clique aqui para escutar a música completa no Youtube!</a></h1>
   </div>
-  <audio src="burythelight.mp3" id="audio"></audio>
 
-  <script>
-    var audio = document.getElementById("audio")
-    audio.volume = 0.2
-    audio.playbackRate = 1
+  <audio src="media/burythelight.mp3" id="audio"></audio>
 
-    function drop() {
-      let confere = audio.currentTime
-      let texto = document.getElementById("texto")
-
-      if (confere != 0) {
-        audio.currentTime = 241
-        audio.play()
-        texto.innerText = "Clique na imagem para pausar a música!"
-      }
-    }
-
-    function tocar() {
-      let confere = audio.currentTime
-      let pausado = audio.paused
-      let texto = document.getElementById("texto")
-
-      if (confere == 0) {
-        audio.currentTime = 1
-        audio.play()
-        texto.innerText = "Clique na imagem para pausar a música!"
-      } else if (confere != 0 && pausado == false) {
-        audio.pause()
-        texto.innerText = "Clique na imagem para retomar a música!"
-      } else if (confere != 0 && pausado == true) {
-        audio.play ()
-        texto.innerText = "Clique na imagem para pausar a música!"
-      }
-    }
-
-    function reiniciar() {
-      let confere = audio.currentTime
-      let texto = document.getElementById("texto")
-
-      if (confere != 0) {
-        audio.currentTime = 1
-        audio.play()
-        texto.innerText = "Clique na imagem para pausar a música!"
-      }
-    }
-  </script>
+  <script src="script/script.js"></script>
 </body>
 </html>
