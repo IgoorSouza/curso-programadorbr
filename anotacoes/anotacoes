@@ -43,7 +43,7 @@
     overflow/overflow-y/overflow-x: auto (adiciona automaticamente uma barra de rolagem) / scroll (adiciona um barra de rolagem) / hidden (esconde o conteúdo em excesso)
 
     colocar imagem em lista não ordenada (a imagem PRECISA ser 16x16):
-      list-style-image: url('[...]');
+      list-style-image: url('(imagem)');
       
     Position
       static: padrão, não permite uso de top, bottom, left, right.
@@ -77,24 +77,63 @@
           }
 
     Flexbox
-      A propriedade flexbox torna os elementos flexíveis a fim de manter a organização dos elementos de acordo com aquilo que definido.
+      Aplicáveis ao elemento pai: 
+        display: flex = organiza os elementos filhos de forma que possam ser contidos dentro do elemento pai, mesmo que seja necessário alterar seus tamanhos para isso
 
-      display: flex = organiza os elementos filhos de forma que possam ser contidos dentro do elemento pai, mesmo que seja necessário alterar seus tamanhos para isso
+        flex-direction: 
+          row = o elemento que recebe "flex-direction: row" se comporta como uma grande linha com orientação da esquerda para a direita, onde seus elementos filhos se organizam de forma a ficar dentro dessa linha. Para isso, cada elemento filho se torna uma coluna e, por padrão, irá ocupar toda a altura do elemento pai
 
-      flex-direction: 
-        row = o elemento que recebe "flex-direction: row" se comporta como uma grande linha, onde seus elementos filhos se organizam de forma a ficar dentro dessa linha. Para isso, cada elemento filho se torna uma coluna e, por padrão, irá ocupar toda a altura do elemento pai.
+          row-reverse = similar ao row, porém a orientação da linha é da direita para a esquerda, a ordem dos elementos é invertida e os elementos são fixados à direita
 
-        row-reverse = similar ao row, porém a ordem dos elementos é invertida e os elementos são alocados para a direita;
+          column = o elemento que recebe "flex-direction: column" se comporta como uma grande coluna com orientação de cima para baixo, onde seus elementos filhos se organizam de forma a ficar dentro dessa coluna. Para isso, cada elemento filho se torna uma linha e, por padrão, irá ocupar toda a largura do elemento pai
 
-        column = o elemento que recebe "flex-direction: column" se comporta como uma grande coluna, onde seus elementos filhos se organizam de forma a ficar dentro dessa coluna. Para isso, cada elemento filho se torna uma linha e, por padrão, irá ocupar toda a largura do elemento pai.
+          column-reverse = similar ao column, porém a orientação da coluna é de baixo para cima, a ordem dos elementos é invertida e os elementos são alocados para a parte de baixo
 
-        column-reverse = similar ao column, porém a ordem dos elementos é invertida e os elementos são alocados para a parte de baixo.
+        flex-wrap: wrap = mantém o tamanho definido dos elementos e forma mais linhas ou colunas para contê-los
 
-      flex-wrap: wrap = mantém o tamanho definido dos elementos e forma mais linhas ou colunas para contê-los
+        flex-wrap: wrap-reverse = inverte a ordem das linhas ou colunas e as posiciona ao lado contrário do natural
 
-      flex-wrap: wrap-reverse = inverte a ordem das linhas ou colunas e as posiciona ao lado contrário do natural
+        flex-flow: (flex-direction flex-wrap) = redução das propriedades flex-direction e flex-wrap em uma só propriedade
 
-      flex-flow: (flex-direction flex-wrap) = redução das propriedades flex-direction e flex-wrap em uma só propriedade
+      justify-content: posiciona os elementos filhos em relação ao elemento pai
+        flex-start = padrão
+
+        flex-end = fixa os elementos na extremidade "final" do elemento pai
+
+        center = centraliza os elementos
+
+        space-around = faz uma borda ao redor do elemento com medidas iguais nos dois lados
+
+        space-between = mantém espaçamento uniforme entre os elementos
+
+        space-evenly = mantém espaçamento uniforme entre a borda e os elementos e também entre os elementos
+
+      align-items: alinha os elementos de acordo com o flex-direction. Caso seja row, alinhará os elementos verticalmente, caso seja column, alinhará os elementos horizontalmente
+        stretch = padrão
+
+        flex-start = posiciona os elementos no início da linha
+
+        flex-end = posiciona os elementos no fim da linha ou coluna
+
+        center = centraliza os elementos
+
+      align-content: similiar ao align-items, porém não se aplica aos elementos, mas sim às linhas ou colunas.
+        stretch = padrão
+
+        center = centraliza as linhas/colunas
+
+        flex-start = posiciona as linhas/colunas no início do elemento pai
+
+        flex-end = posiciona as linhas/colunas no fim do elemento pai
+
+        space-around = faz uma borda ao redor das linhas/colunas com medidas iguais nos dois lados
+
+        space-between = mantém espaçamento uniforme entre as linhas/colunas
+
+    Aplicáveis aos elementos filhos:
+      flex-shrink: 0 / 1 (padrão) = define se o tamanho do elemento será passível de redução (0 = não flexível / 1 = flexível)
+
+      flex-grow: 0 (padrão) / 1 = define se o tamanho do elemento será passível de expansão (0 = não flexível / 1 = flexível / <= 2 = multiplicador de tamanho)
 
   JavaScript
 
@@ -206,10 +245,10 @@
 
     Vídeos
 
-      .play() = iniciar/continuar o vídeo;
-      .pause() = pausar o vídeo;
-      .currentTime = define ou retorna o momento atual do vídeo;
-      .playbackRate = velocidade de reprodução do vídeo;
+      .play() = iniciar/continuar o vídeo
+      .pause() = pausar o vídeo
+      .currentTime = define ou retorna o momento atual do vídeo
+      .playbackRate = velocidade de reprodução do vídeo
 
     Canvas
       Importante: definir o tamanho do canvas na própria tag HTML (<canvas>) e não pelo CSS
@@ -281,5 +320,3 @@
         3. (variável).onload = (funcao)
         4. funcao {(contexto).drawImage(this, x, y, width, height)} 
           Obs.: também é possível usar this.naturalWidth no lugar de width e this.naturalHeight no lugar de height (e fazer operações com esses tamanhos)
-      
-      
