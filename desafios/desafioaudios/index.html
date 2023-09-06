@@ -7,16 +7,13 @@
   <style>
     html {
       overflow-y: hidden;
-    }
-
-    * {
-      margin: 0px;
-      padding: 0px;
+      background-image: linear-gradient(to right, #528ebb, #4442a8);
     }
 
     div {
+      padding-top: 50px;
       margin: auto;
-      height: 750px;
+      height: 550px;
       text-align: center;
     }
 
@@ -30,7 +27,7 @@
     }
 
     h1 {
-      color: #BE3C29;
+      color: white;
       margin-bottom: 20px;
     }
 
@@ -41,24 +38,28 @@
   </style>
 </head>
 <body>
-  <div><img src="yoimiya.png" alt="Yoimiya" onclick="tocar()"></div>
+  <div><img src="motivation.jpg" alt="Bury The Light" onclick="tocar()"></div>
   <div>
-    <h1 id="texto">Clique na Yoimiya para tocar a música tema dela!</h1>
+    <h1 id="texto">Clique na imagem para tocar a música!</h1>
     <h1 onclick="drop()">Drop</h1>
     <h1 onclick="reiniciar()">Reiniciar</h1>
   </div>
-  <audio src="yoimiya.mp3" id="audio"></audio>
+  <audio src="burythelight.mp3" id="audio"></audio>
 
   <script>
     var audio = document.getElementById("audio")
-    audio.volume = 0.1
+    audio.volume = 0.5
+    audio.playbackRate = 1
 
     function drop() {
       let confere = audio.currentTime
+      let texto = document.getElementById("texto")
+
       if (confere != 0) {
-        audio.currentTime = 17.8
+        audio.currentTime = 241
         audio.play()
-      } else {}
+        texto.innerText = "Clique na imagem para pausar a música!"
+      }
     }
 
     function tocar() {
@@ -69,22 +70,25 @@
       if (confere == 0) {
         audio.currentTime = 1
         audio.play()
-        texto.innerText = "Clique na Yoimiya para pausar a música!"
+        texto.innerText = "Clique na imagem para pausar a música!"
       } else if (confere != 0 && pausado == false) {
         audio.pause()
-        texto.innerText = "Clique na Yoimiya para retomar a música!"
+        texto.innerText = "Clique na imagem para retomar a música!"
       } else if (confere != 0 && pausado == true) {
         audio.play ()
-        texto.innerText = "Clique na Yoimiya para pausar a música!"
+        texto.innerText = "Clique na imagem para pausar a música!"
       }
     }
 
     function reiniciar() {
       let confere = audio.currentTime
+      let texto = document.getElementById("texto")
+
       if (confere != 0) {
         audio.currentTime = 1
         audio.play()
-      } else {}
+        texto.innerText = "Clique na imagem para pausar a música!"
+      }
     }
   </script>
 </body>
