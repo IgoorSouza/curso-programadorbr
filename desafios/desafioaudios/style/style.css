@@ -8,23 +8,23 @@ html {
 div {
   padding-top: 50px;
   margin: auto;
-  height: 450px;
+  height: 400px;
   text-align: center;
   }
     
 img {
-  width: 450px;
+  width: 400px;
 }
     
 h1 {
-  font-size: 25px;
+  font-size: 20px;
   color: white;
   margin-bottom: 20px;
   font-weight: normal;
 }
     
 h1#texto {
-  font-size: 30px;
+  font-size: 25px;
 }
     
 a {
