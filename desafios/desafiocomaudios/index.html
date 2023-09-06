@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste</title>
+  <style>
+    html {
+      overflow-y: hidden;
+    }
+
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    div {
+      margin: auto;
+      height: 750px;
+      text-align: center;
+    }
+
+    img {
+      width: 550px;
+      transition-duration: 1s;
+    }
+
+    img:hover {
+      width: 600px;
+    }
+
+    h1 {
+      color: #BE3C29;
+      margin-bottom: 20px;
+    }
+
+    h1#texto {
+      font-size: 40px;
+    }
+    
+  </style>
+</head>
+<body>
+  <div><img src="yoimiya.png" alt="Yoimiya" onclick="tocar()"></div>
+  <div>
+    <h1 id="texto">Clique na Yoimiya para tocar a música tema dela!</h1>
+    <h1 onclick="drop()">Drop</h1>
+    <h1 onclick="reiniciar()">Reiniciar</h1>
+  </div>
+  <audio src="yoimiya.mp3" id="audio"></audio>
+
+  <script>
+    var audio = document.getElementById("audio")
+    audio.volume = 0.1
+
+    function drop() {
+      let confere = audio.currentTime
+      if (confere != 0) {
+        audio.currentTime = 17.8
+        audio.play()
+      } else {}
+    }
+
+    function tocar() {
+      let confere = audio.currentTime
+      let pausado = audio.paused
+      let texto = document.getElementById("texto")
+
+      if (confere == 0) {
+        audio.currentTime = 1
+        audio.play()
+        texto.innerText = "Clique na Yoimiya para pausar a música!"
+      } else if (confere != 0 && pausado == false) {
+        audio.pause()
+        texto.innerText = "Clique na Yoimiya para retomar a música!"
+      } else if (confere != 0 && pausado == true) {
+        audio.play ()
+        texto.innerText = "Clique na Yoimiya para pausar a música!"
+      }
+    }
+
+    function reiniciar() {
+      let confere = audio.currentTime
+      if (confere != 0) {
+        audio.currentTime = 1
+        audio.play()
+      } else {}
+    }
+  </script>
+</body>
+</html>
