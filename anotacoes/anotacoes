@@ -95,20 +95,20 @@
 
         flex-flow: (flex-direction flex-wrap) = redução das propriedades flex-direction e flex-wrap em uma só propriedade
 
-      justify-content: posiciona os elementos filhos em relação ao elemento pai
-        flex-start = padrão
+        justify-content: posiciona os elementos filhos em relação ao elemento pai
+          flex-start = padrão
 
-        flex-end = fixa os elementos na extremidade "final" do elemento pai
+          flex-end = fixa os elementos na extremidade "final" do elemento pai
 
-        center = centraliza os elementos
+          center = centraliza os elementos
 
-        space-around = faz uma borda ao redor do elemento com medidas iguais nos dois lados
+          space-around = faz uma borda ao redor do elemento com medidas iguais nos dois lados
 
-        space-between = mantém espaçamento uniforme entre os elementos
+          space-between = mantém espaçamento uniforme entre os elementos
 
-        space-evenly = mantém espaçamento uniforme entre a borda e os elementos e também entre os elementos
+          space-evenly = mantém espaçamento uniforme entre a borda e os elementos e também entre os elementos
 
-      align-items: alinha os elementos de acordo com o flex-direction. Caso seja row, alinhará os elementos verticalmente, caso seja column, alinhará os elementos horizontalmente
+      align-items: alinha todos os elementos de acordo com o flex-direction. Caso seja row, alinhará os elementos verticalmente, caso seja column, alinhará os elementos horizontalmente
         stretch = padrão
 
         flex-start = posiciona os elementos no início da linha
@@ -117,7 +117,7 @@
 
         center = centraliza os elementos
 
-      align-content: similiar ao align-items, porém não se aplica aos elementos, mas sim às linhas ou colunas.
+      align-content: similiar ao align-items, porém não se aplica aos elementos, mas sim às linhas ou colunas. É o espaçamento entre linhas ou entre colunas.
         stretch = padrão
 
         center = centraliza as linhas/colunas
@@ -130,12 +130,64 @@
 
         space-between = mantém espaçamento uniforme entre as linhas/colunas
 
-    Aplicáveis aos elementos filhos:
-      flex-shrink: 0 / 1 (padrão) = define se o tamanho do elemento será passível de redução (0 = não flexível / 1 = flexível)
+      Aplicáveis aos elementos filhos:
+        flex-shrink: 0 / 1 (padrão) = define se o tamanho do elemento será passível de redução (0 = não flexível / 1 = flexível)
 
-      flex-grow: 0 (padrão) / 1 = define se o tamanho do elemento será passível de expansão (0 = não flexível / 1 = flexível / 2 ou maior = multiplicador de tamanho em relação ao tamanho dos outros elementos)
+        flex-grow: 0 (padrão) / 1 = define se o tamanho do elemento será passível de expansão (0 = não flexível / 1 = flexível / 2 ou maior = multiplicador de tamanho em relação ao tamanho dos outros elementos)
 
+        order: 0 / n / -n = define a ordem dos elementos. Por padrão, todos os elementos possuem ordem 0. Quanto maior a ordem, mais "depois" o elemento ficará e, da mesma forma, quanto menor for a ordem, mais "antes" o elemento irá se posicionar.
+
+        align-self: stretch / flex-start / flex-end / center = posiciona um elemento específico.
+        
+    Grid
+      Aplicáveis ao elemento pai (container da grid)
+        display: grid = define o elemento como uma grid (como se fosse uma tabela com linhas e colunas)
+
+        Obs.: as grids possuem um valor de tamanho exclusivo: o fr. Divide a grid em frações e as distribui entre as linhas e/ou colunas de acordo com os valores passado.
+          Ex.: grid-template-rows: 1fr 3fr 1fr = 1 fração / 3 frações / 1 fração
+
+        grid-template-rows: N% (ocupa uma porcentagem de tamanho da grid) / Npx (tamanho fixo em pixeis) / Nfr (ocupa um número de frações da grid) / auto (se adapta ao tamanho da tela) = cria linhas dentro da grid. Cada valor passado representa uma linha.
+
+        grid-template-columns: N% (ocupa uma porcentagem de tamanho da grid) / Npx (tamanho fixo em pixeis) / Nfr (ocupa um número de frações da grid) / auto (se adapta ao tamanho da tela) = cria colunas dentro da grid. Cada valor passado representa uma coluna.
+          
+        grid-template: linhas / colunas = redução das propriedades grid-template-rows e grid-template-columns em apenas uma.
+
+        grid-row-gap: Npx =  espaçamento entre linhas.
+        grid-column-gap: Npx = espaçamento entre colunas.
+
+        grid-gap: Npx = redução das propriedades grid-row-gap e grid-column-gap em apenas uma. Define o mesmo espaçamento entre as linhas e entre as colunas.
+
+        justify-items: stretch (padrão) / flex-start /  flex-end / center = posiciona horizontalmente os elementos dentro de seu espaço na grid 
+
+        align-items: stretch (padrão) / flex-start / flex-end / center = posiciona verticalmente os elementos dentro de seu espaço na grid
+            
+        justify-content: stretch (padrão) / flex-start / flex-end / space-around / space-between / space-evenly = posiciona horizontalmente cada "bloco" da grid em relação ao elemento pai
+
+        align-content: stretch (padrão) / flex-start / flex-end / space-around / space-between / space-evenly = posiciona verticalmente cada "bloco" da grid em relação ao elemento pai
+
+        Grid Areas:
+            1. Atribuir a propriedade grid-area: (nome) a todos os elementos da grid;
+            2. No container da grid, adicionar a propriedade grid-template-areas: "(nome) (nome) (nome) ...", onde cada elemento adicionado forma uma coluna e tudo que está entre as aspas forma uma linha.
+              Ex.: 
+                .item1 {
+                  grid-area: a1;
+                }
+
+                .item2 {
+                  grid-area: a2;
+                }
+
+                .container {
+                  grid-template-areas: "a1 a2 a2"
+                                      "a2 a1 a1"       
+                }
+
+                No caso acima, são formadas duas linhas, ambas divididas em três partes (colunas), onde o elemento a1 ocupa 1/3 da primeira e 2/3 da segunda e o elemento a2 ocupa 2/3 da primeira e 1/3 da segunda.
       
+      Aplicáveis aos elementos filhos (dentro da grid):  
+        grid-column-start & grid-row-start: N = define onde um elemento irá "começar" seu posicionamento dentro da grid
+
+        grid-column-end & grid-row-end: N / span N (expande o elemento)= define onde um elemento irá "terminar" seu posicionamento dentro da grid
 
   JavaScript
 
