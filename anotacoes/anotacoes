@@ -133,7 +133,9 @@
     Aplicáveis aos elementos filhos:
       flex-shrink: 0 / 1 (padrão) = define se o tamanho do elemento será passível de redução (0 = não flexível / 1 = flexível)
 
-      flex-grow: 0 (padrão) / 1 = define se o tamanho do elemento será passível de expansão (0 = não flexível / 1 = flexível / <= 2 = multiplicador de tamanho)
+      flex-grow: 0 (padrão) / 1 = define se o tamanho do elemento será passível de expansão (0 = não flexível / 1 = flexível / 2 ou maior = multiplicador de tamanho em relação ao tamanho dos outros elementos)
+
+      
 
   JavaScript
 

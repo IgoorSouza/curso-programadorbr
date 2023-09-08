@@ -49,6 +49,10 @@ a {
     width: 600px;
   }
 
+  h1 {
+    font-size: 25px;
+  }
+
   h1#texto {
     font-size: 40px;
   }
