@@ -58,12 +58,10 @@ header h1 {
 }
 
 header p {
-  color: white;
   font-size: 1.2em;
 }
 
 a {
-  color: white;
   text-decoration: none;
 }
 
@@ -78,12 +76,14 @@ li {
 
 li:hover {
   background-image: linear-gradient(to right, #d42727, #e6ce49c0);
+  cursor: pointer;
 }
 
 li span {
   box-sizing: content-box;
   padding: 18px 0px 0px 40px;
   font-size: 1.2em;
+  color: white;
 }
 
 li img {
@@ -101,6 +101,10 @@ li img[src="images/youtube.png"] {
 li img[src="images/tiktok.png"] {
   width: 30px;
   padding-right: 35px;
+}
+
+p#zap {
+  font-size: 20px;
 }
 
 footer img[src="images/git.png"] {
