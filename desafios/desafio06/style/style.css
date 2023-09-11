@@ -3,35 +3,101 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
 
 * {
-  margin: 0px;
   padding: 0px;
-  color: white;
+  margin: 0px;
+  box-sizing: border-box;
   font-family: Sora, sans-serif;
+}
+
+html {
+  height: 100vh;
+}
+
+.gradient {
+  background-image: linear-gradient(to right, #5578BA, #40A376);
 }
 
 body {
   background: url(../images/background.jpg) no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.container {
+  margin: auto;
+  max-width: 540px;
+  padding: 20px;
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  margin-bottom: 20px;
 }
 
 header img {
-  width: 100px;
-  background-image: linear-gradient(to right, #5578BA, #40A376);
+  width: 120px;
   border-radius: 50%;
+  margin-bottom: 10px;
 }
 
 header h1 {
   font-weight: normal;
+  font-size: 2.5em;
+  margin-bottom: 15px;
 }
 
-p {
-  color: rgb(168, 168, 168)
-}
-
-#instagram, #youtube, #tiktok {
-  background-image: linear-gradient(to right, #5578BA, #40A376);
-  border-radius: 30px;
+header p {
+  color: rgb(158, 157, 157);
+  font-size: 1.2em;
 }
 
 a {
+  color: white;
   text-decoration: none;
+}
+
+li {
+  border-radius: 30px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+li span {
+  box-sizing: content-box;
+  padding: 18px 0px 0px 40px;
+  font-size: 1.2em;
+}
+
+li img {
+  box-sizing: content-box;
+  width: 30px;
+  height: 30px;
+  padding: 15px 35px 0px 0px;
+}
+
+li img[src="images/youtube.png"] {
+  width: 45px;
+  padding-right: 25px;
+}
+
+li img[src="images/tiktok.png"] {
+  width: 30px;
+  padding-right: 35px;
+}
+
+footer img {
+  margin: 20px;
+}
+
+@media screen and (max-width: 815px) {
+  html {
+    font-size: 0.9em;
+  }
 }
