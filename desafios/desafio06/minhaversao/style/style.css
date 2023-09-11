@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: Sora, sans-serif;
+}
+
+html {
+  height: 100vh;
+}
+
+.gradient {
+  background-image: linear-gradient(to right, #fd1f1f, #ffa600);
+}
+
+body {
+  background: url(../images/background3.jpg) no-repeat top;
+  background-size: cover;
+  height: 100%;
+}
+
+.container {
+  margin: auto;
+  max-width: 540px;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+header img {
+  width: 200px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  transition-duration: 0.5s;
+}
+
+header img:hover {
+  width: 220px;
+}
+
+header h1 {
+  font-weight: normal;
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header p {
+  color: white;
+  font-size: 1.2em;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+li {
+  border-radius: 30px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+li:hover {
+  background-image: linear-gradient(to right, #d42727, #e6ce49c0);
+}
+
+li span {
+  box-sizing: content-box;
+  padding: 18px 0px 0px 40px;
+  font-size: 1.2em;
+}
+
+li img {
+  box-sizing: content-box;
+  width: 30px;
+  height: 30px;
+  padding: 15px 35px 0px 0px;
+}
+
+li img[src="images/youtube.png"] {
+  width: 45px;
+  padding-right: 25px;
+}
+
+li img[src="images/tiktok.png"] {
+  width: 30px;
+  padding-right: 35px;
+}
+
+footer img[src="images/git.png"] {
+  width: 50px;
+  margin: 20px;
+}
+
+footer img[src="images/email.png"] {
+  width: 60px;
+  margin: 10px;
+}
+
+@media screen and (max-width: 815px) {
+  html {
+    font-size: 0.9em;
+  }
+
+  header img {
+    width: 150px;
+  }
+}
