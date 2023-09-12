@@ -34,6 +34,8 @@ h1 {
   background: url(../images/people.jpg) no-repeat center center;
   background-size: cover;
   height: 500px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 #form {
@@ -43,7 +45,6 @@ h1 {
   padding: 20px;
   box-sizing: border-box;
   background-color: #FFFB;
-  float: right;
 }
 
 #form p {
@@ -62,12 +63,12 @@ select {
   -webkit-appearance: none;
   appearance: none;
 
-  background: white url(/images/arrow.jpg) no-repeat;
+  background: white url(../images/arrow.jpg) no-repeat;
   background-position-x: calc(100% - 10px);
   background-position-y: center;
 } 
 
-#iinscricao {
+#inscricao {
   background-color: #48C5CE;
   border: none;
   color: white;
@@ -75,23 +76,20 @@ select {
 }
 
 footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   background-color: #202121;
   color: white;
   height: 320px;
 }
 
-img {
-  float: left;
+#imagem img {
   width: 160px;
-  margin-right: 50px;
 }
 
 #info {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  width: 700px;
-  transform: translate(-50%, -55%);
+  width: 60%;
 }
 
 #info h2 {
@@ -102,31 +100,21 @@ img {
   font-size: 1.2em;
 }
 
-#info p, #info h2 {
+#info * {
   margin-bottom: 20px;
 }
 
 @media screen and (max-width: 750px) {
-  #form {
-    float: none;
-    margin: 0px;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  #content {
+    justify-content: center;
+    align-content: center;
   }
 
   #info {
-    width: 88vw;
-    text-align: center;
-    padding-top: 10px;
+    width: 50%;
   }
 
   #info p {
     font-size: 1em;
-  }
-
-  img {
-    margin-right: 20px;
   }
 }
