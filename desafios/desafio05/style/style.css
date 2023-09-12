@@ -14,8 +14,8 @@ main {
   background-image: linear-gradient(to bottom, #f5c93b, #eea00f);
 }
 
-#header {
-  height: 25vh;
+header {
+  height: 20vh;
   background: url(../images/churrasco.jpg) center no-repeat;
   background-size: cover;
 }
@@ -93,6 +93,10 @@ footer p {
 }
 
 @media screen and (min-width: 745px) {
+  header {
+    height: 30vh;
+  }
+
   input[placeholder] {
     text-align: center;
   }
