@@ -19,15 +19,15 @@
           <p><strong>GARANTA O SEU LUGAR NO WORKSHOP DO MAIOR ESPECIALISTA EM MARKETING DA ATUALIDADE</strong></p>
           <p>Neste evento, você vai aprender todos os segredos que vão te fazer ser um empreendedor de sucesso sem precisar contar com a sorte.</p>
           <form action="" method="get">
-            <input type="text" name="nome" placeholder="Nome">
-            <input type="email" name="email" placeholder="Email">
+            <input type="text" name="nome" id="nome" placeholder="Nome" >
+            <input type="email" name="email" id="email" placeholder="Email">
             <select name="estado" id="iestado">
               <option value="RJ">Rio de Janeiro</option>
               <option value="SP">São Paulo</option>
               <option value="MG">Minas Gerais</option>
               <option value="ES">Espírito Santo</option>
             </select>
-            <input type="submit" name="inscricao" id="inscricao" value="INSCREVA-SE">
+            <button onclick="inscrever()">INSCREVA-SE</button>
           </form>
         </div>
       </section>
@@ -45,5 +45,6 @@
       </footer>
     </main>
   </div>
+  <script src="script/script.js"></script>
 </body>
 </html>
