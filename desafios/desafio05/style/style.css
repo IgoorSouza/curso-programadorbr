@@ -90,3 +90,17 @@ footer p {
   font-size: 1.1em;
   margin-top: 5px;
 }
+
+@media screen and (min-width: 745px) {
+  input[placeholder] {
+    text-align: center;
+  }
+
+  #conteudo {
+    width: 550px;
+  }
+  footer p{
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+}

@@ -120,11 +120,19 @@ footer {
     align-content: center;
   }
 
+  #imagem img {
+    width: 120px;
+  }
+
   #info {
-    width: 50%;
+    width: 55%;
+  }
+
+  #info h2 {
+    font-size: 24px;
   }
 
   #info p {
-    font-size: 1em;
+    font-size: 0.9em;
   }
 }
