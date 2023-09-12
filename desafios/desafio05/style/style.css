@@ -29,13 +29,13 @@ header {
 }
 
 h1 {
-  font-size: 1.5em;
+  font-size: 2em;
   color: orangered;
   margin-bottom: 25px;
 }
 
 input {
-  font-size: 16px;
+  font-size: 20px;
   border: none;
   background-color: #fde3b3;
   border-radius: 10px;
@@ -64,13 +64,13 @@ input[type=number]:focus {
 }
 
 #resultado {
-  margin-top: 20px;
+  margin-top: 30px;
   background-color: #fde3b3;
   border-radius: 10px;
 }
 
 #resultado p {
-  font-size: 1em;
+  font-size: 1.1em;
   margin: auto;
   padding: 5px;
   width: 300px;
@@ -119,12 +119,6 @@ footer p {
 
   input[type=button] {
     margin-top: 10px;
-  }
-  
-  #resultado {
-    margin-top: 30px;
-    background-color: #fde3b3;
-    border-radius: 10px;
   }
 
   #resultado p {

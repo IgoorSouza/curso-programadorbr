@@ -10,9 +10,9 @@ function calc() {
   let cerveja
   let bebida
 
-  carne = (adulto * 400 + crianca * 200)/1000 * duracao
-  cerveja = Math.ceil(adulto * 1200/355) * duracao //355 = 1 lata de cerveja
-  bebida = Math.ceil(adulto * 0.5 + crianca * 0.25) * duracao
+  carne = Math.ceil((adulto * 400 + crianca * 200)/1000 * duracao)
+  cerveja = Math.ceil((adulto * 1200/355) * duracao) //355 = 1 lata de cerveja
+  bebida = Math.ceil((adulto * 0.3 + crianca * 0.15) * duracao)
 
   if (crianca == 0 && adulto == 0) {
     resultado.innerHTML = "<p>Um churrasco sem pessoas? <br> Que estranho...</p>"
