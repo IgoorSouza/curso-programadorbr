@@ -29,29 +29,28 @@ header {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.5em;
   color: orangered;
-  margin: 20px 0px 40px 0px;
+  margin-bottom: 25px;
 }
 
 input {
-  font-size: 20px;
+  font-size: 16px;
   border: none;
   background-color: #fde3b3;
   border-radius: 10px;
 }
 
-input[type=number], input[type=text] {
+input[type=number] {
   display: block;
   width: 100%;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   box-sizing: border-box;
 }
 
 input[type=button] {
   padding: 10px;
-  margin-top: 10px;
   font-weight: bold;
 }
 
@@ -60,22 +59,22 @@ input[type=button]:hover {
   background-color: white;
 }
 
-input[type=number]:focus, input[type=text]:focus {
+input[type=number]:focus {
   background-color: white;
 }
 
 #resultado {
-  margin-top: 30px;
+  margin-top: 20px;
   background-color: #fde3b3;
   border-radius: 10px;
 }
 
 #resultado p {
-  font-size: 1.1em;
+  font-size: 1em;
   margin: auto;
   padding: 5px;
   width: 300px;
-  line-height: 1.3em;
+  line-height: 1.1em;
 }
 
 span {
@@ -92,17 +91,45 @@ footer p {
   margin-top: 5px;
 }
 
-@media screen and (min-width: 745px) {
+@media screen and (min-width: 768px) {
   header {
     height: 30vh;
+  }
+
+  #conteudo {
+    width: 550px;
+  }
+
+  h1 {
+    font-size: 2em;
+    margin: 20px 0px 40px 0px;
+  }
+
+  input {
+    font-size: 20px;
+  }
+
+  input[type=number] {
+    margin-bottom: 20px;
   }
 
   input[placeholder] {
     text-align: center;
   }
 
-  #conteudo {
-    width: 550px;
+  input[type=button] {
+    margin-top: 10px;
+  }
+  
+  #resultado {
+    margin-top: 30px;
+    background-color: #fde3b3;
+    border-radius: 10px;
+  }
+
+  #resultado p {
+    font-size: 1.1em;
+    line-height: 1.3em;
   }
 
   #resultado p#obs {
