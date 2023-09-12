@@ -31,7 +31,7 @@ h1 {
 }
 
 #content {
-  background: url(/images/people.jpg) no-repeat center center;
+  background: url(../images/people.jpg) no-repeat center center;
   background-size: cover;
   height: 500px;
 }
