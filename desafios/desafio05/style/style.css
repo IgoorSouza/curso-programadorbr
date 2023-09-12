@@ -15,7 +15,7 @@ main {
 }
 
 #header {
-  height: 30vh;
+  height: 25vh;
   background: url(../images/churrasco.jpg) center no-repeat;
   background-size: cover;
 }
@@ -83,6 +83,7 @@ span {
 }
 
 footer {
+  width: 100%;
   text-align: center;
 }
 
@@ -99,6 +100,11 @@ footer p {
   #conteudo {
     width: 550px;
   }
+
+  #resultado p#obs {
+    width: 400px;
+  }
+  
   footer p{
     font-size: 1.2em;
     margin-top: 10px;
