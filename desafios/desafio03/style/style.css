@@ -2,10 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-html {
-  overflow-x: hidden;
-}
-
 * {
   margin: 0px;
   padding: 0px;
@@ -19,6 +15,7 @@ html {
 #top-bar {
   background-color: #ff6b28;
   text-align: center;
+  width: 100%;
 }
 
 #imagem {
@@ -110,5 +107,5 @@ footer {
 footer p {
   margin: auto;
   padding-top: 15px; 
-  width: 500px;
+  width: 100%;
 }

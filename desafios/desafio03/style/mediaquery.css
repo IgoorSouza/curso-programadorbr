@@ -34,13 +34,13 @@
 
 @media screen and (min-width: 1018px) {
 
-#imagem {
-  height: 350px;
-}
+  #imagem {
+    height: 350px;
+  }
 
-main {
-  margin: auto;
-  padding-top: 70px;
-  width: 800px;
-}
+  main {
+    margin: auto;
+    padding-top: 70px;
+    width: 800px;
+  }
 }
