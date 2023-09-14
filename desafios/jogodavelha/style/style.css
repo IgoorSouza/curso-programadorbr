@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgba(255, 210, 112, 0.486);
+}
+
+#container {
+  margin: auto;
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+}
+
+#titulo {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 50px;
+  align-self: center;
+  margin-top: 10px;
+}
+
+#jogo {
+  display: grid;
+  grid-template-areas: "q1 q2 q3" "q4 q5 q6" "q7 q8 q9";
+  grid-gap: 10px;
+  align-self: flex-start;
+  width: 635px;
+}
+
+#jogo div {
+  width: 200px;
+  height: 200px;
+  background-color: #ffcf99;
+  border: 2px solid black;
+}
+
+#jogo div:hover {
+  background-color: #fabd78;
+  cursor: pointer;
+}
+
+#info{
+  background-color: white;
+  border-radius: 20px;
+  width: 350px;
+  height: 632px;
+  justify-self: flex-start;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#q1 { grid-area: q1;}
+#q2 { grid-area: q2; }
+#q3 { grid-area: q3; }
+#q4 { grid-area: q4; }
+#q5 { grid-area: q5; }
+#q6 { grid-area: q6; }
+#q7 { grid-area: q7; }
+#q8 { grid-area: q8; }
+#q9 { grid-area: q9; }

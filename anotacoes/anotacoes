@@ -462,3 +462,36 @@
              var [marcos, joao] = alunos
 
            Nesse exemplo, marcos recebe aluno e joao recebe aluno1, pois a posição é o que importa nos arrays.
+
+    
+    Try Catch: 
+      O "Try Catch" é uma forma de tratamento de erros que executa o código de "catch" se o código de "try" retornar um erro e logo após prossegue a execução do resto do código. O argumento passado para "catch" é o ReferenceError. Após o bloco do "catch" é possível utilizar o "finally", que executa um bloco de código independente de haver erro ou não.
+
+        try { 
+          bloco de código 
+        } catch (argumento) {
+          bloco de código
+        }
+        resto do código
+
+        OU
+
+        try { 
+          bloco de código (tenta ser executado e retorna sucesso ou falha)
+        } catch (argumento) {
+          bloco de código (executado se houver falha)
+        } finally {
+          bloco de código (executado sempre)
+        }
+      
+      Throw: é uma propriedade que pode ser utilizada dentro de "try" para forçar um erro. Em caso de erro, o throw irá executar o código de "catch" juntamente com seu próprio código.
+        Ex.: 
+          try {
+            if (nome == "") {
+              throw "O nome não pode ser vazio"
+            }
+            console.log(nome)
+          } catch (erro) {
+            console.log("Houve um erro", erro)
+          }
+      
