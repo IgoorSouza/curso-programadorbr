@@ -392,7 +392,22 @@
     
     Callback = uma função recebe outra função como paramêtro e a executa dentro de si.
 
-    função.then([função]) = executa uma segunda função após executar a primeira.
+    Promises = São objetos que recebem uma função como argumento e retornam se uma ação assíncrona foi realizada com sucesso ou se falhou.
+      Ex.: let promise = new Promise(function(resolve, reject) {
+        setTimeout(()=> {
+          usuarios.push(nome);
+          let error = false;
+
+          if (!error) {
+            resolve();
+          } else {
+            reject({ msg: "Erro" })
+          }
+        }, 1000)
+      })
+      return promise;
+
+    função.then([função]) = executa uma segunda função após executar a primeira. Bastante usado com promises.
 
     Async Await = faz com que o código seja "pausado" até que a função seja completamente resolvida.
       Ex.: async function executar(){
@@ -400,17 +415,26 @@
               listarUsuarios()
            }
 
-    Filter = filtra as informações de um array e retorna outro array com as informações filtradas.
+    Filter: (array).filter([função]) = filtra as informações de um array e retorna outro array com as informações filtradas.
+      
       Ex.: let alunosComMenosde30 = alunos.filter(temMenosde30)
            function temMenosde30(aluno) {
               return aluno.idade < 30 
            }
     
-        Nesse exemplo, o filter seleciona os alunos com menos de 30 anos de idade e os armazena em um array.
+        Nesse exemplo, o filter seleciona os alunos com menos de 30 anos de idade e os armazena em um array. "aluno" representa um elemento do array.
 
-    Map = forma um novo array independente com base nas informações de um array já existente.
+    Map: (array).map([função]) = executa uma mesma função para todos os elementos de um array, formando um novo array.
 
-    Reduce = forma uma única linha de saída com os valores ou strings selecionados de um array.
+    Reduce = (array).reduce([função], valor inicial) = forma uma única variável com todos os valores ou strings selecionados de um array.
+      Ex.: idadeTotal = alunos.reduce(idadeDaTurma, 0)
+
+           function idadeDaTurma(total, aluno){
+             return total + aluno.idade;
+           }
+           
+        Nesse exemplo, a idade de todos os elementos do array "alunos" está sendo somada e armazenada em uma única variável (idadeTotal).
+        Na função a ser executada dentro do reduce, é necessário passar, além do nome da função, o valor inicial de "total" (nesse exemplo), que pode ser um número, uma string ou outro.
     
     (array).slice() = corta uma parte do array. Se não é passado nada para o slice, ele faz uma cópia do array.
     [...(array)] = faz uma cópia de um array.
@@ -438,5 +462,3 @@
              var [marcos, joao] = alunos
 
            Nesse exemplo, marcos recebe aluno e joao recebe aluno1, pois a posição é o que importa nos arrays.
-      
-      
