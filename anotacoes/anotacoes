@@ -289,9 +289,9 @@
     
     Temporizador e Intervalo:
 
-      Temporizador: setTimeout((funcao), tempo (em milissegundos)) = depois de disparado, executa uma função após o tempo determinado
+      Temporizador: setTimeout((função), tempo (em milissegundos)) = depois de disparado, executa uma função após o tempo determinado
 
-      Intervalo: setInterval((funcao), tempo (em milissegundos)) = depois de disparado, executa uma função repetidamente de acordo com o intervalo de tempo determinado
+      Intervalo: setInterval((função), tempo (em milissegundos)) = depois de disparado, executa uma função repetidamente de acordo com o intervalo de tempo determinado
 
       Interromper setTimeout: clearTimeout((variável correspondente ao timeout))
 
@@ -371,6 +371,72 @@
       Segunda maneira:
         1. Definir variável com valor "new Image()"
         2. (variável).src = "(imagem)"
-        3. (variável).onload = (funcao)
-        4. funcao {(contexto).drawImage(this, x, y, width, height)} 
+        3. (variável).onload = (função)
+        4. função {(contexto).drawImage(this, x, y, width, height)} 
           Obs.: também é possível usar this.naturalWidth no lugar de width e this.naturalHeight no lugar de height (e fazer operações com esses tamanhos)
+
+    Strict mode ("use strict") = bloqueia o uso de variáveis que não foram declaradas e impede a criação automática delas, exigindo o uso de var, let ou const para criar variáveis.
+
+    This = se refere ao contexto em que está definido.
+    
+    Bind ([função].bind([contexto])) = dá contexto a uma função.
+
+    Arrow function ( () => {} ) = simplifica o código de uma função. Entretanto, arrow functions NÃO suportam this e bind e seu this se refere sempre ao elemento window.
+      Ex.: dobro(x) {                   dobro = (x) => {
+              console.log(x * 2)   ==     console.log(x * 2)
+          }                             }
+      
+      Ex2.: dobro(x) {           
+              return (x * 2)   ==   dobro = (x) => x * 2
+            }
+    
+    Callback = uma função recebe outra função como paramêtro e a executa dentro de si.
+
+    função.then([função]) = executa uma segunda função após executar a primeira.
+
+    Async Await = faz com que o código seja "pausado" até que a função seja completamente resolvida.
+      Ex.: async function executar(){
+              await inserirUsuario()
+              listarUsuarios()
+           }
+
+    Filter = filtra as informações de um array e retorna outro array com as informações filtradas.
+      Ex.: let alunosComMenosde30 = alunos.filter(temMenosde30)
+           function temMenosde30(aluno) {
+              return aluno.idade < 30 
+           }
+    
+        Nesse exemplo, o filter seleciona os alunos com menos de 30 anos de idade e os armazena em um array.
+
+    Map = forma um novo array independente com base nas informações de um array já existente.
+
+    Reduce = forma uma única linha de saída com os valores ou strings selecionados de um array.
+    
+    (array).slice() = corta uma parte do array. Se não é passado nada para o slice, ele faz uma cópia do array.
+    [...(array)] = faz uma cópia de um array.
+
+    Object.assign({}, [objeto]) = faz uma cópia de um objeto.
+    {...(objeto)} = faz uma cópia de um objeto.
+
+    Spread Operator = é os "três pontinhos" utilizados para se copiar um array ou um objeto. Também permite, além de copiar, adicionar novas informações à cópia e mesclar dois ou mais arrays ou objetos.
+      Ex.: var copia = {...pessoa} = copia o objeto "pessoa".
+           var copia = {...pessoa, cidade: Rio de Janeiro} = copia o objeto "pessoa" e adiciona a propriedade cidade à cópia.
+           var copia = {...pessoa, ...contato} = junta os objetos "pessoa" e "contato" em um único objeto.
+
+    Desestruturando um objeto: 
+      var { (propriedade) } = (objeto) : seleciona uma ou mais propriedades do objeto e as armazena em uma variável de mesmo nome.
+        Ex.: var { matrícula, nome } = aluno
+      
+      OBS.: selecionar o objeto inteiro faz uma cópia completa do mesmo, mas selecionar uma propriedade específica faz com que essa propriedade se separe da cópia.
+        Ex.: var {nome, ...copia } = aluno
+
+          Nesse exemplo, a copia irá ser formada apenas pelas propriedades restantes do objeto, já que a propriedade nome foi anteriormente selecionada e "retirada".
+
+    Desestruturando um array: 
+      var [(elemento do array)] = alunos : seleciona um elemento do array baseado em sua posição e o armazena em uma variável de nome personalizável.
+        Ex.: var alunos = [aluno, aluno1] 
+             var [marcos, joao] = alunos
+
+           Nesse exemplo, marcos recebe aluno e joao recebe aluno1, pois a posição é o que importa nos arrays.
+      
+      
