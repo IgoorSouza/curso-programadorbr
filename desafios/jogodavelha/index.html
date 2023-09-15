@@ -23,13 +23,19 @@
     </div>
 
     <div id="info">
-      <div id="placar">
-        <!-- IDEIA: Fazer o placar aparecer apenas depois de começar a primeira partida e sumir quando mudar nome de jogador / resetar o placar -->
+      <div id="players">
+        <h1>Como jogar</h1>
+        <p>Sinta-se livre para mudar o nome dos jogadores. O <span class="jogador1">Jogador 1</span> será aquele a iniciar o jogo. Quando o nome de um jogador for alterado, seu placar será reiniciado. </p>
+        <h2 class="jogador1">Jogador 1:</h2><input type="text" name="j1" id="j1" maxlength="18"><button class="button" id="buttonj1" onclick="mudarj1()">Mudar</button>
+        <h2 class="jogador2">Jogador 2:</h2><input type="text" name="j2" id="j2" maxlength="18"><button class="button" id="buttonj2" onclick="mudarj2()">Mudar</button>
       </div>
-
-      <h1>Como jogar</h1>
-      <p>Defina o nome dos dois jogadores abaixo, sendo o Jogador 1 aquele a iniciar o jogo.</p>
-
+      
+      <div id="placar">
+        <h1>Placar atual</h1>
+        <h2 class="jogador1"><span id="nomej1">Jogador 1</span>: <span id="pontosj1">0 pontos</span></h2>
+        <h2 class="jogador2"><span id="nomej2">Jogador 2</span>: <span id="pontosj2">0 pontos</span></h2>
+        <p>Obrigado por jogar!</p>
+      </div>
     </div>
   </div>
 

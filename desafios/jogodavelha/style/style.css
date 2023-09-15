@@ -16,7 +16,7 @@ body {
   margin: auto;
   display: flex;
   width: 100vw;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 #titulo {
@@ -47,12 +47,92 @@ body {
 }
 
 #info{
+  display: flex;
+  flex-flow: column wrap;
+  justify-self: flex-start;
+  justify-content: space-between;
   background-color: white;
   border-radius: 20px;
   width: 350px;
   height: 632px;
-  justify-self: flex-start;
+  padding: 10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#players h2 {
+  margin-top: 20px;
+}
+
+#players h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#players h1, #placar h1 {
+  color: rgb(2, 141, 2);
+}
+
+#j1, #j2 {
+  padding: 8px;
+  border-radius: 10px;
+  width: 40%;
+}
+
+#j1 {
+  border: 2px solid blue;
+  margin: 0px 8px;
+}
+
+#j2 {
+  border: 2px solid red;
+  margin: 0px 8px;
+}
+
+.button {
+  padding: 5px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.button:hover{
+  cursor: pointer;
+}
+
+#buttonj1 {
+  background-color: blue;
+}
+
+#buttonj2 {
+  background-color: red;
+}
+
+.jogador1 {
+  color: blue;
+  display: inline-block;
+}
+
+.jogador2 {
+  color: red;
+  display: inline-block;
+}
+
+#placar {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 55%;
+  border-radius: 20px;
+  background-color: #FFE9B9;
+}
+
+#placar p {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(0, 141, 0);
 }
 
 #q1 { grid-area: q1;}
