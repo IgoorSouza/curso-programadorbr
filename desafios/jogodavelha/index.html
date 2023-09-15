@@ -11,31 +11,44 @@
   <div id="container">
     
     <div id="jogo">
-      <div id="q1"></div>
-      <div id="q2"></div>
-      <div id="q3"></div>
-      <div id="q4"></div>
-      <div id="q5"></div>
-      <div id="q6"></div>
-      <div id="q7"></div>
-      <div id="q8"></div>
-      <div id="q9"></div>
+      <div id="q1" class="casa" onclick="marcar(), marcar1()"></div>
+      <div id="q2" class="casa" onclick="marcar(), marcar2()"></div>
+      <div id="q3" class="casa" onclick="marcar(), marcar3()"></div>
+      <div id="q4" class="casa" onclick="marcar(), marcar4()"></div>
+      <div id="q5" class="casa" onclick="marcar(), marcar5()"></div>
+      <div id="q6" class="casa" onclick="marcar(), marcar6()"></div>
+      <div id="q7" class="casa" onclick="marcar(), marcar7()"></div>
+      <div id="q8" class="casa" onclick="marcar(), marcar8()"></div>
+      <div id="q9" class="casa" onclick="marcar(), marcar9()"></div>
     </div>
 
     <div id="info">
-      <div id="players">
-        <h1>Como jogar</h1>
-        <p>Sinta-se livre para mudar o nome dos jogadores. O <span class="jogador1">Jogador 1</span> será aquele a iniciar o jogo. Quando o nome de um jogador for alterado, seu placar será reiniciado. </p>
-        <h2 class="jogador1">Jogador 1:</h2><input type="text" name="j1" id="j1" maxlength="18"><button class="button" id="buttonj1" onclick="mudarj1()">Mudar</button>
-        <h2 class="jogador2">Jogador 2:</h2><input type="text" name="j2" id="j2" maxlength="18"><button class="button" id="buttonj2" onclick="mudarj2()">Mudar</button>
-      </div>
-      
-      <div id="placar">
-        <h1>Placar atual</h1>
-        <h2 class="jogador1"><span id="nomej1">Jogador 1</span>: <span id="pontosj1">0 pontos</span></h2>
-        <h2 class="jogador2"><span id="nomej2">Jogador 2</span>: <span id="pontosj2">0 pontos</span></h2>
-        <p>Obrigado por jogar!</p>
-      </div>
+      <h1>Como funciona</h1>
+
+      <p class="description">
+        O <span class="jogador1">Jogador 1</span> começará a primeira rodada e, a partir da segunda, o ganhador da rodada anterior irá começar.
+      </p> 
+
+      <p class="description" id="jogadorStart">
+        Começa a rodada atual: <br> 
+        <span id="start">Jogador 1</span>
+      </p>
+
+      <h1>Placar atual</h1>
+
+      <h2 class="jogador1">
+        <span id="nomej1">Jogador 1</span>: 
+        <span id="pontosj1">0 pontos</span>
+      </h2>
+
+      <h2 class="jogador2">
+        <span id="nomej2">Jogador 2</span>: 
+        <span id="pontosj2">0 pontos</span>
+      </h2>
+
+      <button>Reiniciar placar</button>
+
+      <p>Obrigado por jogar!</p>
     </div>
   </div>
 

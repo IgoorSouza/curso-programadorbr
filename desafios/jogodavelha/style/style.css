@@ -9,7 +9,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: rgba(255, 210, 112, 0.486);
+  background-color: #ffd2707c;
 }
 
 #container {
@@ -49,90 +49,67 @@ body {
 #info{
   display: flex;
   flex-flow: column wrap;
-  justify-self: flex-start;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-content: center;
   background-color: white;
   border-radius: 20px;
   width: 350px;
-  height: 632px;
+  height: 622px;
   padding: 10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#players h2 {
-  margin-top: 20px;
-}
-
-#players h1 {
-  margin-bottom: 20px;
+#info h1 {
+  color: #eeae00;
   text-align: center;
 }
 
-#players h1, #placar h1 {
-  color: rgb(2, 141, 2);
-}
-
-#j1, #j2 {
-  padding: 8px;
-  border-radius: 10px;
-  width: 40%;
-}
-
-#j1 {
-  border: 2px solid blue;
-  margin: 0px 8px;
-}
-
-#j2 {
-  border: 2px solid red;
-  margin: 0px 8px;
-}
-
-.button {
-  padding: 5px;
-  color: white;
+#info button {
+  padding: 10px;
   border: none;
-  border-radius: 8px;
-  font-size: 14px;
+  border-radius: 10px;
+  font-size: 20px;
   font-weight: bold;
+  color: white;
+  background-color: #eeae00;
 }
 
-.button:hover{
+#info button:hover{
   cursor: pointer;
-}
-
-#buttonj1 {
-  background-color: blue;
-}
-
-#buttonj2 {
-  background-color: red;
 }
 
 .jogador1 {
   color: blue;
-  display: inline-block;
+  text-align: center;
 }
 
 .jogador2 {
   color: red;
-  display: inline-block;
+  text-align: center;
 }
 
-#placar {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-around;
-  align-items: center;
-  height: 55%;
-  border-radius: 20px;
-  background-color: #FFE9B9;
+#info .description {
+  width: 90%;
+  font-size: 20px;
+  text-align: left;
 }
 
-#placar p {
+#info #jogadorStart {
+  text-align: center;
   font-size: 24px;
-  font-weight: bold;
-  color: rgb(0, 141, 0);
+}
+
+#info p {
+  font-size: 24px;
+  text-align: center;
+}
+
+img[src="images/jogador1.png"] {
+  width: 200px;
+}
+
+img[src="images/jogador2.png"] {
+  width: 200px;
 }
 
 #q1 { grid-area: q1;}
