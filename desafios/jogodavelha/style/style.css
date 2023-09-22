@@ -180,6 +180,7 @@ img[src="images/jogador2.png"] {
   #info #jogadorStart {
     text-align: center;
     font-size: 14px;
+    margin-bottom: 8px;
   }
 
   #j1b {
