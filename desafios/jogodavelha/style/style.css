@@ -126,7 +126,72 @@ img[src="images/jogador2.png"] {
 #q8 { grid-area: q8; }
 #q9 { grid-area: q9; }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 700px) {
+  #container {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  #jogo {
+    width: 330px;
+    align-self: center;
+  }
+
+  #jogo div {
+    width: 100px;
+    height: 100px;
+  }
+
+  #info {
+    justify-content: space-evenly;
+    align-self: center;
+    width: 370px;
+    height: 220px;
+  }
+
+  #info .description {
+    width: 50%;
+    font-size: 12px;
+    margin: 0px 15px 20px 0px;
+    text-align: justify;
+  }
+
+  #j1b {
+    font-size: 12px;
+  }
+
+  #info #jogadorStart {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  #info p {
+    font-size: 16px;
+  }
+
+  #info h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .jogador1 {
+    font-size: 16px;
+  }
+  
+  .jogador2 {
+    font-size: 16px;
+  }
+
+  #info button {
+    padding: 5px;
+  }
+
+  img[src="images/jogador1.png"], img[src="images/jogador2.png"] {
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1100px) {
   #container {
     flex-direction: column;
     height: 100%;
