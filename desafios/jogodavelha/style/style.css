@@ -172,7 +172,7 @@ img[src="images/jogador2.png"] {
   #info .description {
     width: 55%;
     font-size: 14px;
-    margin: 0px 10px 10px 0px;
+    margin-right: 10px;
     text-align: justify;
   }
 
