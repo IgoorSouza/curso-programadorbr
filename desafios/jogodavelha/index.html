@@ -1,57 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style/style.css">
-  <title>Jogo da Velha</title>
-</head>
-<body>
-  <h1 id="titulo">JOGO DA VELHA</h1>
-  <div id="container">
-    
-    <div id="jogo">
-      <div id="q1" onclick="marcar(q1)"></div>
-      <div id="q2" onclick="marcar(q2)"></div>
-      <div id="q3" onclick="marcar(q3)"></div>
-      <div id="q4" onclick="marcar(q4)"></div>
-      <div id="q5" onclick="marcar(q5)"></div>
-      <div id="q6" onclick="marcar(q6)"></div>
-      <div id="q7" onclick="marcar(q7)"></div>
-      <div id="q8" onclick="marcar(q8)"></div>
-      <div id="q9" onclick="marcar(q9)"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Jogo da Velha</title>
+  </head>
+  <body>
+    <h1 id="titulo">JOGO DA VELHA</h1>
+    <div id="container">
+      <div id="jogo">
+        <div id="q1" onclick="marcar(q1)"></div>
+        <div id="q2" onclick="marcar(q2)"></div>
+        <div id="q3" onclick="marcar(q3)"></div>
+        <div id="q4" onclick="marcar(q4)"></div>
+        <div id="q5" onclick="marcar(q5)"></div>
+        <div id="q6" onclick="marcar(q6)"></div>
+        <div id="q7" onclick="marcar(q7)"></div>
+        <div id="q8" onclick="marcar(q8)"></div>
+        <div id="q9" onclick="marcar(q9)"></div>
+      </div>
+
+      <div id="info">
+        <h1>Como funciona</h1>
+
+        <p class="description">
+          O <span class="jogador1">Jogador 1</span> começará a primeira rodada
+          e, a partir da segunda, o ganhador da rodada anterior irá começar. O
+          jogador a iniciar a rodada permanece o mesmo até o outro jogador
+          ganhar uma rodada.
+        </p>
+
+        <p class="description" id="jogadorStart">
+          Começa a rodada atual: <br />
+          <span id="start">Jogador 1</span>
+        </p>
+
+        <h1>Placar atual</h1>
+
+        <h2 class="jogador1">
+          <span id="nomej1">Jogador 1</span>:
+          <span id="pontosj1">0 pontos</span>
+        </h2>
+
+        <h2 class="jogador2">
+          <span id="nomej2">Jogador 2</span>:
+          <span id="pontosj2">0 pontos</span>
+        </h2>
+
+        <button onclick="resetPlacar()">Reiniciar placar</button>
+
+        <p>Obrigado por jogar!</p>
+      </div>
     </div>
 
-    <div id="info">
-      <h1>Como funciona</h1>
-
-      <p class="description">
-        O <span class="jogador1">Jogador 1</span> começará a primeira rodada e, a partir da segunda, o ganhador da rodada anterior irá começar. Se der velha, um jogador aleatório irá começar a próxima rodada.
-      </p> 
-
-      <p class="description" id="jogadorStart">
-        Começa a rodada atual: <br> 
-        <span id="start">Jogador 1</span>
-      </p>
-
-      <h1>Placar atual</h1>
-
-      <h2 class="jogador1">
-        <span id="nomej1">Jogador 1</span>: 
-        <span id="pontosj1">0 pontos</span>
-      </h2>
-
-      <h2 class="jogador2">
-        <span id="nomej2">Jogador 2</span>: 
-        <span id="pontosj2">0 pontos</span>
-      </h2>
-
-      <button onclick="resetPlacar()">Reiniciar placar</button>
-
-      <p>Obrigado por jogar!</p>
-    </div>
-  </div>
-
-  <script src="script/script.js"></script>
-</body>
+    <script src="script/script.js"></script>
+  </body>
 </html>
