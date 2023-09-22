@@ -177,6 +177,10 @@ img[src="images/jogador2.png"] {
     text-align: justify;
   }
 
+  #info #tituloPlacar {
+    margin-top: 10px;
+  }
+
   #info #jogadorStart {
     text-align: center;
     font-size: 14px;
