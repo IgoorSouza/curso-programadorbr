@@ -133,7 +133,7 @@ img[src="images/jogador2.png"] {
 
   #titulo {
     font-size: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 
   #container {
@@ -145,7 +145,7 @@ img[src="images/jogador2.png"] {
   #jogo {
     width: 330px;
     align-self: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 
   #jogo div {
@@ -162,7 +162,7 @@ img[src="images/jogador2.png"] {
 
   #info h1 {
     font-size: 18px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 
   #info p {
