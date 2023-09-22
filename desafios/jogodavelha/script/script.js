@@ -265,4 +265,6 @@ function resetPlacar() {
   start.innerText = "Jogador 1" 
   pontosj1.innerText = "0 pontos";
   pontosj2.innerText = "0 pontos";
+
+  reset()
 }
