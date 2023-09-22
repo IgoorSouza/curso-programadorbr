@@ -11,22 +11,22 @@
   <div id="container">
     
     <div id="jogo">
-      <div id="q1" class="casa" onclick="marcar(), marcar1()"></div>
-      <div id="q2" class="casa" onclick="marcar(), marcar2()"></div>
-      <div id="q3" class="casa" onclick="marcar(), marcar3()"></div>
-      <div id="q4" class="casa" onclick="marcar(), marcar4()"></div>
-      <div id="q5" class="casa" onclick="marcar(), marcar5()"></div>
-      <div id="q6" class="casa" onclick="marcar(), marcar6()"></div>
-      <div id="q7" class="casa" onclick="marcar(), marcar7()"></div>
-      <div id="q8" class="casa" onclick="marcar(), marcar8()"></div>
-      <div id="q9" class="casa" onclick="marcar(), marcar9()"></div>
+      <div id="q1" onclick="marcar(q1)"></div>
+      <div id="q2" onclick="marcar(q2)"></div>
+      <div id="q3" onclick="marcar(q3)"></div>
+      <div id="q4" onclick="marcar(q4)"></div>
+      <div id="q5" onclick="marcar(q5)"></div>
+      <div id="q6" onclick="marcar(q6)"></div>
+      <div id="q7" onclick="marcar(q7)"></div>
+      <div id="q8" onclick="marcar(q8)"></div>
+      <div id="q9" onclick="marcar(q9)"></div>
     </div>
 
     <div id="info">
       <h1>Como funciona</h1>
 
       <p class="description">
-        O <span class="jogador1">Jogador 1</span> começará a primeira rodada e, a partir da segunda, o ganhador da rodada anterior irá começar. Se o resultado for velha, o jogador a iniciar a rodada permanece o mesmo até o outro jogador ganhar uma rodada.
+        O <span class="jogador1">Jogador 1</span> começará a primeira rodada e, a partir da segunda, o ganhador da rodada anterior irá começar. Se der velha, um jogador aleatório irá começar a próxima rodada.
       </p> 
 
       <p class="description" id="jogadorStart">
