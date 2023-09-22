@@ -154,7 +154,7 @@ img[src="images/jogador2.png"] {
   }
 
   #info {
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-self: center;
     width: 340px;
     height: 240px;
@@ -177,10 +177,6 @@ img[src="images/jogador2.png"] {
     text-align: justify;
   }
 
-  #info #tituloPlacar {
-    margin-top: 10px;
-  }
-
   #info #jogadorStart {
     text-align: center;
     font-size: 14px;
@@ -192,10 +188,12 @@ img[src="images/jogador2.png"] {
 
   .jogador1 {
     font-size: 15px;
+    margin: 5px 0px;
   }
   
   .jogador2 {
     font-size: 15px;
+    margin: 15px 0px 20px 0px;
   }
 
   #info button {
@@ -203,6 +201,7 @@ img[src="images/jogador2.png"] {
     padding: 2px;
     font-size: 16px;
     align-self: center;
+    margin-bottom: 20px;
   }
 
   img[src="images/jogador1.png"], img[src="images/jogador2.png"] {
