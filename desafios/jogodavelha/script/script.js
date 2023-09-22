@@ -155,7 +155,8 @@ function fimdejogo() {
       pontosj1.innerText = `${contp1} pontos`;
     }
 
-    iniciar.innerText = "Jogador 1";
+    iniciar.innerHTML = "Jogador 1";
+    iniciar.style.color = "blue"
 
     setTimeout(reset, 100);
 
@@ -204,6 +205,7 @@ function fimdejogo() {
     }
 
     iniciar.innerText = "Jogador 2";
+    iniciar.style.color = "red"
 
     setTimeout(reset, 100);
 
@@ -262,7 +264,8 @@ function resetPlacar() {
   contp1 = 0;
   contp2 = 0;
   i = 0;
-  start.innerText = "Jogador 1" 
+  start.innerText = "Jogador 1"
+  start.style.color = "blue"
   pontosj1.innerText = "0 pontos";
   pontosj2.innerText = "0 pontos";
 

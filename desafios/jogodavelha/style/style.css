@@ -64,6 +64,10 @@ body {
   text-align: center;
 }
 
+#info #start {
+  color: blue;
+}
+
 #info button {
   padding: 10px;
   border: none;
@@ -121,3 +125,73 @@ img[src="images/jogador2.png"] {
 #q7 { grid-area: q7; }
 #q8 { grid-area: q8; }
 #q9 { grid-area: q9; }
+
+@media screen and (max-width: 1100px) {
+  #container {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  #jogo {
+    width: 410px;
+    align-self: center;
+  }
+
+  #jogo div {
+    width: 125px;
+    height: 125px;
+  }
+
+  #info{
+    justify-content: space-evenly;
+    align-self: center;
+    width: 450px;
+    height: 280px;
+  }
+
+  #info .description {
+    width: 50%;
+    font-size: 16px;
+    margin-right: 20px;
+    text-align: justify;
+  }
+
+  #j1b {
+    font-size: 16px;
+  }
+
+  #info #jogadorStart {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  #info p {
+    font-size: 20px;
+  }
+
+  #info h1 {
+    font-size: 24px;
+  }
+
+  .jogador1 {
+    font-size: 20px;
+  }
+  
+  .jogador2 {
+    font-size: 20px;
+  }
+
+  #info button {
+    padding: 5px;
+  }
+
+  img[src="images/jogador1.png"], img[src="images/jogador2.png"] {
+    width: 125px;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  #container {
+    width: 75%;
+  }
+}
