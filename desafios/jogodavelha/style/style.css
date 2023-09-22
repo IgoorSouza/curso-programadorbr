@@ -116,7 +116,7 @@ img[src="images/jogador2.png"] {
   width: 200px;
 }
 
-#q1 { grid-area: q1;}
+#q1 { grid-area: q1; }
 #q2 { grid-area: q2; }
 #q3 { grid-area: q3; }
 #q4 { grid-area: q4; }
