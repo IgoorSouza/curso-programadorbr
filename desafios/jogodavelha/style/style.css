@@ -126,14 +126,77 @@ img[src="images/jogador1.png"],  img[src="images/jogador2.png"]{
   color: red;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (min-width: 0px) and (max-width: 700px) {
+  #container {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  #jogo {
+    grid-gap: 3px;
+    width: 318px;
+    align-self: center;
+  }
+
+  #jogo div {
+    width: 100px;
+    height: 100px;
+  }
+
+  #tutorial {
+    align-self: center;
+    width: 400px;
+    height: 250px;
+  }
+
+  #tutorial h1 {
+    font-size: 20px;
+  }
+  
+  #tutorial p {
+    font-size: 13px;
+  }
+
+  #info {
+    width: 48%;
+  }
+
+  #info #jogadorStart {
+    font-size: 16px;
+  }
+
+  #placar {
+    width: 45%;
+    height: 100%;
+  }
+
+  #placar {
+    border-radius: 20px;
+  }
+  
+  #placar button {
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  #placar p, #placar .jogador1, .jogador2 {
+    font-size: 16px;
+  }
+
+  img[src="images/jogador1.png"], img[src="images/jogador2.png"] {
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1100px) {
   #container {
     flex-direction: column;
     height: 90%;
   }
 
   #jogo {
-    width: 410px;
+    grid-gap: 5px;
+    width: 397px;
     align-self: center;
   }
 
