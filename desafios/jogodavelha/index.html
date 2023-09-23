@@ -21,36 +21,36 @@
         <div id="q9" onclick="marcar(q9)"></div>
       </div>
 
-      <div id="info">
-        <h1>Como funciona</h1>
+      <div id="tutorial">
+        <div id="info">
+          <h1>Como funciona</h1>
 
-        <p class="description">
-          O <span class="jogador1" id="j1b">Jogador 1</span> começará a primeira rodada
-          e, a partir da segunda, o ganhador da rodada anterior irá começar. O
-          jogador a iniciar a rodada permanece o mesmo até o outro jogador
-          ganhar uma rodada.
-        </p>
+          <p class="description">
+            O <span class="jogador1">Jogador 1</span> começará a primeira rodada
+            e, a partir da segunda, o ganhador da rodada anterior irá começar. O
+            jogador a iniciar a rodada permanece o mesmo até o outro jogador
+            ganhar uma rodada.
+          </p>
 
-        <p class="description" id="jogadorStart">
-          Começa a rodada atual: <br />
-          <span id="start">Jogador 1</span>
-        </p>
+          <p class="description" id="jogadorStart">
+            Começa a rodada atual: <br />
+            <span id="start" class="jogador1">Jogador 1</span>
+          </p>
+        </div>
 
-        <h1>Placar atual</h1>
-
-        <h2 class="jogador1">
-          <span id="nomej1">Jogador 1</span>:
-          <span id="pontosj1">0 pontos</span>
-        </h2>
-
-        <h2 class="jogador2">
-          <span id="nomej2">Jogador 2</span>:
-          <span id="pontosj2">0 pontos</span>
-        </h2>
-
-        <button onclick="resetPlacar()">Reiniciar placar</button>
-
-        <p>Obrigado por jogar!</p>
+        <div id="placar">
+          <h1>Placar atual</h1>
+          <h2 class="jogador1">
+            <span id="nomej1">Jogador 1</span>:
+            <span id="pontosj1">0 pontos</span>
+          </h2>
+          <h2 class="jogador2">
+            <span id="nomej2">Jogador 2</span>:
+            <span id="pontosj2">0 pontos</span>
+          </h2>
+          <button onclick="resetPlacar()">Reiniciar placar</button>
+          <p>Obrigado por jogar!</p>
+        </div>
       </div>
     </div>
 

@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+#q1 { grid-area: q1; }
+#q2 { grid-area: q2; }
+#q3 { grid-area: q3; }
+#q4 { grid-area: q4; }
+#q5 { grid-area: q5; }
+#q6 { grid-area: q6; }
+#q7 { grid-area: q7; }
+#q8 { grid-area: q8; }
+#q9 { grid-area: q9; }
+
 * {
   padding: 0px;
   margin: 0px;
@@ -46,56 +56,34 @@ body {
   cursor: pointer;
 }
 
-#info{
+img[src="images/jogador1.png"],  img[src="images/jogador2.png"]{
+  width: 200px;
+}
+
+#tutorial {
   display: flex;
   flex-flow: column wrap;
-  justify-content: space-around;
-  align-content: center;
+  box-sizing: border-box;
   background-color: white;
-  border-radius: 20px;
   width: 350px;
-  height: 622px;
-  padding: 10px;
+  border-radius: 20px;
+  padding: 15px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#info h1 {
+#tutorial h1 {
   color: #eeae00;
   text-align: center;
 }
 
-#info #start {
-  color: blue;
-}
-
-#info button {
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
+#tutorial p {
   font-size: 20px;
-  font-weight: bold;
-  color: white;
-  background-color: #eeae00;
+  margin: 10px 0px;
+  text-align: justify;
 }
 
-#info button:hover{
-  cursor: pointer;
-}
-
-.jogador1 {
-  color: blue;
-  text-align: center;
-}
-
-.jogador2 {
-  color: red;
-  text-align: center;
-}
-
-#info .description {
-  width: 90%;
-  font-size: 20px;
-  text-align: left;
+#info {
+  height: 50%;
 }
 
 #info #jogadorStart {
@@ -103,117 +91,45 @@ body {
   font-size: 24px;
 }
 
-#info p {
-  font-size: 24px;
-  text-align: center;
+#placar {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  height: 49%;
+  align-self: center;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 30px;
 }
 
-img[src="images/jogador1.png"] {
-  width: 200px;
+#placar button {
+  background-color: #eeae00;
+  color: white;
+  width: 75%;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-img[src="images/jogador2.png"] {
-  width: 200px;
+#placar p {
+  font-size: 22px;
 }
 
-#q1 { grid-area: q1; }
-#q2 { grid-area: q2; }
-#q3 { grid-area: q3; }
-#q4 { grid-area: q4; }
-#q5 { grid-area: q5; }
-#q6 { grid-area: q6; }
-#q7 { grid-area: q7; }
-#q8 { grid-area: q8; }
-#q9 { grid-area: q9; }
+.jogador1 {
+  color: blue;
+}
 
-@media screen and (max-width: 700px) {
-  body {
-    height: 90vh;
-  }
+.jogador2 {
+  color: red;
+}
 
-  #titulo {
-    font-size: 40px;
-    margin-bottom: 40px;
-  }
-
+@media screen and (max-width: 1100px) {
   #container {
     flex-direction: column;
-    height: 100%;
-    justify-content: flex-start;
-  }
-
-  #jogo {
-    width: 330px;
-    align-self: center;
-    margin-bottom: 40px;
-  }
-
-  #jogo div {
-    width: 100px;
-    height: 100px;
-  }
-
-  #info {
-    justify-content: flex-start;
-    align-self: center;
-    width: 340px;
-    height: 240px;
-  }
-
-  #info h1 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-
-  #info p {
-    font-size: 15px;
-  }
-
-  #info .description {
-    width: 55%;
-    font-size: 14px;
-    margin-right: 12px;
-    margin-bottom: 8px;
-    text-align: justify;
-  }
-
-  #info #jogadorStart {
-    text-align: center;
-    font-size: 14px;
-    margin-bottom: 8px;
-  }
-
-  #j1b {
-    font-size: 13px;
-  }
-
-  .jogador1 {
-    font-size: 15px;
-    margin: 5px 0px;
-  }
-  
-  .jogador2 {
-    font-size: 15px;
-    margin: 15px 0px 20px 0px;
-  }
-
-  #info button {
-    width: 150px;
-    padding: 2px;
-    font-size: 16px;
-    align-self: center;
-    margin-bottom: 20px;
-  }
-
-  img[src="images/jogador1.png"], img[src="images/jogador2.png"] {
-    width: 100px;
-  }
-}
-
-@media screen and (min-width: 700px) and (max-width: 1100px) {
-  #container {
-    flex-direction: column;
-    height: 100%;
+    height: 90%;
   }
 
   #jogo {
@@ -226,47 +142,44 @@ img[src="images/jogador2.png"] {
     height: 125px;
   }
 
-  #info{
-    justify-content: space-evenly;
+  #tutorial {
     align-self: center;
     width: 450px;
-    height: 280px;
+    height: 300px;
   }
 
-  #info .description {
-    width: 50%;
+  #tutorial h1 {
+    font-size: 24px;
+  }
+  
+  #tutorial p {
     font-size: 16px;
-    margin-right: 20px;
-    text-align: justify;
   }
 
-  #j1b {
-    font-size: 16px;
+  #info {
+    width: 48%;
   }
 
   #info #jogadorStart {
-    text-align: center;
-    font-size: 20px;
+    font-size: 18px;
   }
 
-  #info p {
-    font-size: 20px;
+  #placar {
+    width: 45%;
+    height: 100%;
   }
 
-  #info h1 {
-    font-size: 24px;
-  }
-
-  .jogador1 {
-    font-size: 20px;
+  #placar {
+    border-radius: 20px;
   }
   
-  .jogador2 {
-    font-size: 20px;
+  #placar button {
+    padding: 8px;
+    font-size: 16px;
   }
 
-  #info button {
-    padding: 5px;
+  #placar p, #placar .jogador1, .jogador2 {
+    font-size: 18px;
   }
 
   img[src="images/jogador1.png"], img[src="images/jogador2.png"] {
@@ -277,5 +190,13 @@ img[src="images/jogador2.png"] {
 @media screen and (min-width: 1800px) {
   #container {
     width: 75%;
+  }
+
+  #info #jogadorStart {
+    font-size: 25px;
+  }
+
+  #tutorial {
+    width: 400px;
   }
 }

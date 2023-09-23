@@ -264,8 +264,8 @@ function resetPlacar() {
   contp1 = 0;
   contp2 = 0;
   i = 0;
-  start.innerText = "Jogador 1"
-  start.style.color = "blue"
+  iniciar.innerText = "Jogador 1"
+  iniciar.style.color = "blue"
   pontosj1.innerText = "0 pontos";
   pontosj2.innerText = "0 pontos";
 
