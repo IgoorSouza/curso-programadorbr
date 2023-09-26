@@ -189,6 +189,95 @@
 
         grid-column-end & grid-row-end: N / span N (expande o elemento)= define onde um elemento irá "terminar" seu posicionamento dentro da grid
 
+    
+    Animações em CSS
+      Declara-se uma animação com suas propriedades e passa-se o nome e o tempo de duração dessa animação para o elemento que vai utilizá-la.
+
+        Declaração da animação: 
+        
+          @keyframes (nome da animação) {
+            from {(propriedade)}
+            to {(propriedade)}
+          }
+
+        Passando para o elemento:
+
+          elemento {
+            animation-name: (nome da animação);
+            animation-duration: (duração da animação);
+          }
+        
+        Ex.:
+
+          @keyframes changeColor {
+            from {background-color: red}
+            to {background-color: blue}
+          }
+
+          .box {
+            animation-name: changeColor;
+            animation-duration: 3s;
+          }
+      
+      É possível utilizar porcentagens no lugar de "from" e "to":
+        0% {background-color: red}
+        50% {background-color: green}
+        100% {background-color: blue}
+
+      É possível também colocar mais de uma propriedade em um estado da animação. 
+          0% {background-color: red; width: 100%}
+          100% {background-color: blue; width: 50%}
+
+      Animation delay: atrasa o início da animação de acordo o tempo determinado. Declarada no elemento que recebe a animação.
+          animation-delay: (tempo de atraso);
+
+        Também é possível colocar valores de tempo negativos, que resultam no início imediato da animação a partir do ponto especificado.
+          Ex.: animation-duration: 6s
+               animation-delay: -3s
+
+            Nesse exemplo, a animação irá começar a ser reproduzida a partir de sua metade (3s).
+        
+      Loop de animação: é possível definir quantas vezes uma animação será repetida ou, ainda, se ela irá se repetir infinitamente. Declarada no elemento que recebe a animação.
+          animation-iteration-count: (numero de repetições)
+          animation-iteration-count: infinite
+
+      Direção da animação: define se a animação será reproduzida do início para o final, do final para o início ou se será alternada (só é possível utilizar animações alternadas quando há repetição da mesma). Declarada no elemento que recebe a animação.
+          animation-direction:
+            reverse = a animação é reproduzida ao contrário.
+
+            alternate = a animação é reproduzida de forma alternada, começando pela direção padrão.
+
+            alternate-reverse = a animação é reproduzida de forma alternada, começando pela direção contrária.
+      
+      Animation fill: define o estado do elemento após ou antes da animação ser reproduzida. Declarada no elemento que recebe a animação.
+          animation-fill-mode: 
+            forwards = o elemento mantém o estado final da animação.
+
+            backwards = funciona apenas quando há delay na animação. Posiciona a animação no seu primeiro estado e só inicia a execução após o delay acabar.
+
+            both = aplica ambas as propriedades forwards e backwards.
+      
+     Timing function: define a velocidade que uma animação é reproduzida. Declarada no elemento que recebe a animação
+        animation-timing-function: 
+          linear = mesma velocidade durante toda a animação.
+        
+          ease, ease-in, ease-out, ease-in-out = diferentes velocidades ao longo da animação.
+
+    Shorthand: declarada no elemento que recebe a animação.
+      animation: nome duração timing-function delay iteration-count direction fill-mode;
+
+  Transições / Transitions: 
+    transition-property: (propriedade) = define qual propriedade irá receber a transição. É possível selecionar todas as propriedades de um elemento utilizando o valor "all".
+
+    transition-duration: (duração da transição).
+
+    transition-delay: (tempo de atraso) = atraso na execução da transição.
+          
+    transition-timing-function: linear/ease/ease-in/ease-out/ease-in-out = velocidade de reprodução da transição.
+
+    Shorthand:
+      transition: property duration delay timing-function;
+
   JavaScript
 
     Objetos
