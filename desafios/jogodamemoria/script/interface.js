@@ -1,6 +1,5 @@
-let casas = document.getElementsByClassName("casa")
+var i = 0
 
-function flipCard(casa) {
-  casa.setAttribute("class", "casa cartaVirada")
-  console.log(casa)
+function virar(carta) {
+  carta.setAttribute("class", "exibir cartas")
 }

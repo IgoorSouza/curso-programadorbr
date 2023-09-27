@@ -1,9 +1,5 @@
 @charset "UTF-8";
 
-@keyframes virarCarta {
-  100% {background-color: black}
-}
-
 body {
   height: 98vh;
   display: flex;
@@ -13,16 +9,16 @@ body {
 }
 
 #container {
-  width: 390px;
-  height: 490px;
+  width: 350px;
+  height: 440px;
   gap: 10px;
   display: flex;
   flex-wrap: wrap;
 }
 
-.casa {
-  width: 90px;
-  height: 90px;
+.cartas {
+  width: 80px;
+  height: 80px;
   border-radius: 20px;
   background-color: #0084ff;
   box-shadow: 8px 8px 20px #000000c2;
@@ -32,20 +28,30 @@ body {
   position: relative;
 }
 
-.casa p {
+.cartas p {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 30px;
   font-weight: bolder;
 }
 
-.casa:hover {
+.cartas img {
+  display: none;
+}
+
+.carta:hover {
   cursor: pointer;
 }
 
-.cartaVirada {
-  animation-name: virarCarta;
-  animation-duration: 500ms; 
-  animation-fill-mode: forwards;
+.exibir {
+  background-color: black;
+}
+
+.exibir img {
+  display: block;
+}
+
+.exibir p {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -59,12 +65,12 @@ body {
     gap: 15px;
   }
 
-  .casa {
+  .cartas {
     width: 150px;
     height: 150px;
   }
 
-  .casa p {
+  .cartas p {
     font-size: 40px;
   }
 }
