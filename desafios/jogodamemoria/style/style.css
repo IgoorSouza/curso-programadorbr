@@ -38,8 +38,12 @@ body {
   display: none;
 }
 
-.carta:hover {
+.cartas:hover {
   cursor: pointer;
+}
+
+.cartas img {
+  width: 70px;
 }
 
 .exibir {
@@ -52,10 +56,6 @@ body {
 
 .exibir p {
   display: none;
-}
-
-.cartas img {
-  width: 70px;
 }
 
 @media screen and (min-width: 768px) {
