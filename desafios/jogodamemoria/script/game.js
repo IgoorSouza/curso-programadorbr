@@ -1,6 +1,6 @@
-let cartas = []
 var cont = 0
 var acertos = 0
+var cartas = []
 
 function flipCard(carta) {
   if (carta.classList.contains("exibir") == false) {
@@ -12,7 +12,7 @@ function flipCard(carta) {
       if (carta1.innerHTML == carta2.innerHTML) {
         acertos++
         if (acertos == 10) {
-          finalizar()
+          setTimeout(finalizar, 700)
         }
       } else {
         setTimeout(errou, 700, carta1, carta2)
@@ -21,14 +21,5 @@ function flipCard(carta) {
     } else {
       cont++
     }
-  } else {}
-}
-
-function finalizar() {
-  
-}
-
-function errou (carta1, carta2) {
-  carta1.setAttribute("class", "cartas")
-  carta2.setAttribute("class", "cartas")
+  }
 }
