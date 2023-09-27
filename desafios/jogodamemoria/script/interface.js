@@ -9,6 +9,4 @@ function errou (carta1, carta2) {
 
 function finalizar() {
   alert("Parabéns! Você terminou o jogo.")
-  document.getElementById("again")
-  again.style.display = "block"
 }
