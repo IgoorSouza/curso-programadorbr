@@ -23,14 +23,3 @@ function flipCard(carta) {
     }
   }
 }
-
-function restart() {
-  acertos = 0
-  let resetarCartas = document.getElementsByClassName("cartas")
-  for (let i = 0; i < 20; i++) {
-    resetarCartas[i].setAttribute("class", "cartas")
-  }
-
-  let telaFinal = document.getElementById("gameOver")
-  telaFinal.style.display = "none"
-}
