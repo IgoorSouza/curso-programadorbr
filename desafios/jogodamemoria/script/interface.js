@@ -1,5 +1,10 @@
 function virar(carta) {
-  carta.setAttribute("class", "exibir cartas")
+  carta.setAttribute("class", "virarCarta cartas")
+  setTimeout(exibir, 200, carta)
+}
+
+function exibir(carta) {
+  carta.setAttribute("class", "virarCarta exibir cartas")
 }
 
 function errou (carta1, carta2) {
@@ -8,5 +13,6 @@ function errou (carta1, carta2) {
 }
 
 function finalizar() {
-  alert("Parabéns! Você terminou o jogo.")
+  let telaFinal = document.getElementById("gameOver")
+  telaFinal.style.display = "flex"
 }
