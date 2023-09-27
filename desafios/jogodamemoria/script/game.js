@@ -1,0 +1,1 @@
+let casas = document.getElementsByClassName("casa")
