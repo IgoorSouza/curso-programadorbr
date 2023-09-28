@@ -73,11 +73,20 @@ body {
   height: 100%;
   background-color: #000000d0;
   color: white;
-  font-size: 23px;
-  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
+}
+
+#gameOver h1 {
+  font-size: 30px;
+}
+
+#gameOver p {
+  font-size: 20px;
+  margin-top: 25px;
+  width: 80%;
 }
 
 #gameOver button {
@@ -88,11 +97,12 @@ body {
   border: none;
   color: white;
   background-color: #0c8aff;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
   body {
-    height: 98vh;
+    height: 100vh;
     align-content: center;
   }
 
@@ -118,6 +128,15 @@ body {
 
   #gameOver {
     font-size: 40px;
+  }
+
+  #gameOver h1 {
+    font-size: 70px;
+  }
+  
+  #gameOver p {
+    font-size: 35px;
+    margin-top: 30px;
   }
   
   #gameOver button {
