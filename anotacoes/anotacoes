@@ -590,7 +590,7 @@
       Sintaxe: $("(seletor)").[metodo]()
         Obs.: os seletores são semelhantes ao CSS (. = class, # = id)
         
-        IMPORTANTE: o símbolo "$" também é bastante usado por outras tecnologias. Por isso, existe o método "$.noConflict()", que faz com que o seletor do jQuery deixe de ser "$" e passe a ser "jQuery". Também é possível atribur esse método a uma variável e, assim, o jQuery passa a ser chamado a partir do nome dessa variável. 
+        IMPORTANTE: o símbolo "$" também é bastante usado por outras tecnologias. Por isso, existe o método "$.noConflict()", que faz com que o seletor do jQuery deixe de ser "$" e passe a ser "jQuery". Também é possível atribur esse método a uma variável e, assim, o jQuery passa a ser chamado a partir do nome dessa variável.
 
       Métodos importantes do jQuery: 
         hide,
@@ -608,4 +608,9 @@
         slideToggle,
         animate,
         stop,
-        
+        find,
+        children,
+        text, 
+        html,
+        val (value),
+        attr (attribute),   
