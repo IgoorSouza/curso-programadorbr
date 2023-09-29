@@ -1,4 +1,3 @@
-
   HTML
 
     negrito = <b> (formatação) e <strong> (semântica de destaque)
@@ -36,9 +35,10 @@
           não precisam de valor: controls, autoplay, muted, loop,
           precisam de valor: width, height, poster = src(""), preload = "auto" (inicia o carregamento do vídeo após a página carregar) / "none" (não carrega o vídeo enquanto o usuário não der play) / "metadata" (carrega apenas alguns dados sobre o vídeo)
           Obs.: quando preload e autoplay são usados juntos, o autoplay possui prioridade
+
                               
   CSS
-
+  
     conteúdo em excesso ("vazando" do lugar onde deveria estar):
     overflow/overflow-y/overflow-x: auto (adiciona automaticamente uma barra de rolagem) / scroll (adiciona um barra de rolagem) / hidden (esconde o conteúdo em excesso)
 
@@ -278,6 +278,7 @@
     Shorthand:
       transition: property duration delay timing-function;
 
+
   JavaScript
   
     Objetos
@@ -359,7 +360,6 @@
     *Biblioteca importante: Math
 
     JSON:
-
       JSON.stringify() = transforma um objeto em uma string
       JSON.parse() = transforma uma string em um objeto
 
@@ -551,7 +551,6 @@
              var [marcos, joao] = alunos
 
            Nesse exemplo, marcos recebe aluno e joao recebe aluno1, pois a posição é o que importa nos arrays.
-
     
     Try Catch: 
       O "Try Catch" é uma forma de tratamento de erros que executa o código de "catch" se o código de "try" retornar um erro e logo após prossegue a execução do resto do código. O argumento passado para "catch" é o ReferenceError. Após o bloco do "catch" é possível utilizar o "finally", que executa um bloco de código independente de haver erro ou não.
@@ -592,7 +591,8 @@
         
         IMPORTANTE: o símbolo "$" também é bastante usado por outras tecnologias. Por isso, existe o método "$.noConflict()", que faz com que o seletor do jQuery deixe de ser "$" e passe a ser "jQuery". Também é possível atribur esse método a uma variável e, assim, o jQuery passa a ser chamado a partir do nome dessa variável.
 
-      Métodos importantes do jQuery: 
+      Lista de métodos importantes do jQuery:
+
         hide,
         show,
         click,
@@ -610,7 +610,42 @@
         stop,
         find,
         children,
-        text, 
+        text,
         html,
         val (value),
-        attr (attribute),   
+        attr (attribute),
+        remove,
+        empty,
+        append,
+        prepend,
+        after,
+        before,
+        addClass,
+        removeClass,
+        toggleClass,
+        css,
+        width,
+        innerWidth,
+        outerWidth,
+        height,
+        innerHeight
+        outerHeight,
+        siblings,
+        next,
+        nextAll,
+        nextUntil,
+        prev,
+        prevAll,
+        prevUntil,
+        filter,
+        first,
+        last,
+        not,
+        eq
+
+    Bootstrap
+      Importar do site oficial do Bootstrap (https://getbootstrap.com/docs/5.3/getting-started/download/) e linkar o CSS e o JS ao HTML (CDN via jsDelivr)
+
+      Lista de class importantes do Bootstrap:
+
+        
