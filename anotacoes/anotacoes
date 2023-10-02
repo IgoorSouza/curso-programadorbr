@@ -641,7 +641,7 @@
         first,
         last,
         not,
-        eq
+        eq (equivalent)
 
     Bootstrap
       Importar do site oficial do Bootstrap (https://getbootstrap.com/docs/5.3/getting-started/download/) e linkar o CSS e o JS ao HTML (CDN via jsDelivr)
@@ -673,7 +673,7 @@
           white
 
         Botões: 
-          btn, btn-(cor do bootstrap)
+          btn, btn-(cor do bootstrap), btn-close
 
         Texto:
           h(1 / 2 / 3 / 4 / 5 / 6)
