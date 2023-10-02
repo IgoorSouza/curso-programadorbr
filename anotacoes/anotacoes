@@ -646,6 +646,132 @@
     Bootstrap
       Importar do site oficial do Bootstrap (https://getbootstrap.com/docs/5.3/getting-started/download/) e linkar o CSS e o JS ao HTML (CDN via jsDelivr)
 
+      Como customizar o Bootstrap:
+          Além do SCSS, há outra maneira de fazer isso:
+
+          Identificar o código do Bootstrap a ser modificado, criar um novo arquivo CSS e modificar as propriedades do código.
+          Aula de referência: https://programadorbr.club.hotmart.com/lesson/M7qwAj6n4x/customizando-o-bootstrap
+
+      Prioridade do Bootstrap: o Bootstrap tem maior prioridade dentro de um elemento devido à presença da propriedade !important em seu código.
+
+
       Lista de class importantes do Bootstrap:
 
-        
+        Cores: as cores são antecedidas do tipo do elemento a ser "colorido".
+          Ex.: h1 class="text-primary" -> muda cor do texto
+               h1 class="bg-primary" -> muda cor do background
+
+          primary (padrão azul),
+          secondary (padrão cinza),
+          success (padrão verde),
+          danger (padrão vermelho),
+          warning (padrão amarelo),
+          info (padrão ciano),
+          light,
+          dark,
+          black,
+          white
+
+        Botões: 
+          btn, btn-(cor do bootstrap)
+
+        Texto:
+          h(1 / 2 / 3 / 4 / 5 / 6)
+          display-(1 / 2 / 3 / 4 / 5 / 6)
+
+        Margin:
+          m-(0 / 1 / 2 / 3 / 4 / 5)
+          margin-top: mt-(0 / 1 / 2 / 3 / 4 / 5)
+          margin-start (margin-left): ms-(0 / 1 / 2 / 3 / 4 / 5)
+          margin-end (margin-right): me-(0 / 1 / 2 / 3 / 4 / 5)
+          margin-bottom: mb-(0 / 1 / 2 / 3 / 4 / 5)
+          margin-top e margin-bottom: my-(0 / 1 / 2 / 3 / 4 / 5) 
+          margin-start e margin-end: mx-(0 / 1 / 2 / 3 / 4 / 5)
+
+        Padding: 
+          padding: p-(0 / 1 / 2 / 3 / 4 / 5)
+          padding-top: pt-(0 / 1 / 2 / 3 / 4 / 5)
+          padding-start (margin-left): ps-(0 / 1 / 2 / 3 / 4 / 5)
+          padding-end (margin-right): pe-(0 / 1 / 2 / 3 / 4 / 5)
+          padding-bottom: pb-(0 / 1 / 2 / 3 / 4 / 5)
+          margin-top e margin-bottom: py-(0 / 1 / 2 / 3 / 4 / 5) 
+          margin-start e margin-end: px-(0 / 1 / 2 / 3 / 4 / 5)
+
+        Container:
+          container
+
+        Breakpoints:
+          sm (min-width: 576px)
+          md (min-width: 768px)
+          lg (min-width: 992px)
+          xl (min-width: 1200px)
+          xxl (min-width: 1400px)
+
+          Como usar: {propriedade}-{breakpoint} ou {propriedade}-{breakpoint}-{valor}
+            Ex.: container-lg
+                 m-xxl-5
+          
+        Tamanho:
+          width: w-(25/50/75/100), vw-100
+          height: h-(25, 50, 75, 100), vh-100
+
+        Border:
+          border, border-top, border-start, border-end, border-bottom (obrigatórios para poder aplicar os outros abaixo)
+
+          Tamanho da borda: 
+            border-(0 / 1 / 2 / 3 / 4 / 5)
+            border-top-(0 / 1 / 2 / 3 / 4 / 5)
+            border-start-(0 / 1 / 2 / 3 / 4 / 5)
+            border-end-(0 / 1 / 2 / 3 / 4 / 5)
+            border-bottom-(0 / 1 / 2 / 3 / 4 / 5)
+
+          Cor e opacidade da borda: 
+            border-(cor do bootstrap)
+            border-opacity-(10/25/50/75)
+
+          Arredondamento da borda: 
+            rounded-(0 / 1 / 2 / 3 / 4 / 5)
+            rounded-top-(0 / 1 / 2 / 3 / 4 / 5)
+            rounded-start-(0 / 1 / 2 / 3 / 4 / 5)
+            rounded-end-(0 / 1 / 2 / 3 / 4 / 5)
+            rounded-bottom-(0 / 1 / 2 / 3 / 4 / 5)
+            rounded-circle
+            rounded-pill
+
+        Display:
+          d-inline, d-inline-block, d-block, d-none, d-flex
+
+        Flexbox:
+          https://getbootstrap.com/docs/5.3/utilities/flex/
+          
+          No elemento pai: 
+            d-flex
+            flex-(column / row)
+            justify-content-(valor)
+            gap-(0 / 1 / 2 / 3 / 4 / 5)
+          
+          No elemento filho: 
+            align-self-(valor)
+
+        Position:
+          position-(relative / absolute / fixed / sticky)
+          top-(valor)
+          start-(valor)
+          end-(valor)
+          bottom-(valor)
+
+        Tabelas:
+          table, 
+          table-striped, 
+          table-striped-columns, 
+          table-hover, 
+          table-active,
+          table-bordered,
+          table-borderless,
+          table-sm
+
+        Alertas
+          alert, alert-danger, alert-dismissible
+
+          Pode ser usado com botão (classe alert-dismissible necessária):
+            button class="btn btn-close" data-bs-dismiss="alert"
