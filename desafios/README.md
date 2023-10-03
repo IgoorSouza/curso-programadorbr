@@ -1,1 +1,1 @@
-Essa pasta é destinada ao armazenamento dos códigos desenvolvidos por mim para solucionar os desafios propostos pelo professor sem a necessidade de consulta às aulas, utilizando apenas o conhecimento já adquirido e utilizando as anotações feitas durante as aulas.
+Essa pasta é destinada ao armazenamento dos códigos desenvolvidos por mim para solucionar os desafios propostos pelo professor e adicionar funcionalidades extras a eles sem a necessidade de consulta às aulas, utilizando apenas o conhecimento já adquirido e utilizando as anotações feitas durante as aulas.
