@@ -17,7 +17,9 @@ allRides.forEach(async ([id, value]) => {
   const firstPosition = ride.data[0]
   const firstLocationData = await getLocationData(firstPosition.latitude, firstPosition.longitude)
 
+  const mapID = `map${ride.id}`
   const mapElement = document.createElement("div")
+  mapElement.id = mapID
   mapElement.style = "width: 100px; height: 100px"
   mapElement.classList.add("bg-secondary")
   mapElement.classList.add("rounded-4")
@@ -51,4 +53,15 @@ allRides.forEach(async ([id, value]) => {
 
   itemElement.appendChild(mapElement)
   itemElement.appendChild(dataElement)
+
+  const map = L.map("mapID", { 
+    zoomControl: false,
+    scrollWheelZoom: false, 
+    dragging: false, 
+    attributionControl: false 
+  })
+  map.setView([firstPosition.latitude, firstPosition.longitude], 13) 
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { minZoom: 5, maxZoom: 20, ext: 'png'}).addTo(map);
+
+  L.marker([firstPosition.latitude, firstPosition.longitude]).addTo(map)
 })

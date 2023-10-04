@@ -9,6 +9,10 @@ function createNewRide() {
   return rideID
 }
 
+function deleteRide(rideID) {
+  localStorage.removeItem(rideID)
+}
+
 function addPosition(rideID, position) {
   const rideRecord = getRideRecord(rideID)
   const newData = {
