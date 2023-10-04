@@ -39,5 +39,5 @@ stopBtn.addEventListener("click", () => {
   stopBtn.classList.add("d-none")
   startBtn.classList.remove("d-none")
 
-  window.location.href = "../index.html"
+  window.location.href = "./index.html"
 })
