@@ -775,3 +775,19 @@
 
           Pode ser usado com botão (classe alert-dismissible necessária):
             button class="btn btn-close" data-bs-dismiss="alert"
+
+        Conteúdo expandível e colapsável (Accordion)
+          Aulas de referência: 
+            https://programadorbr.club.hotmart.com/lesson/M7qoDbLj4x/accordion  
+            https://programadorbr.club.hotmart.com/lesson/k7QNbQEnOy/customizando-o-accordion
+
+          accordion (na div pai)
+          accordion-item (nas divs filhas)
+          accordion-header (nos elementos que vão causar a expansão e o colapso do conteúdo)
+          accordion-button (no botão que contém o texto do accordion-header)
+          accordion-body (no conteúdo)
+          accordion-collapse (no conteúdo)
+          collapse (no conteúdo)
+
+          Estilo do Accordion: consultar documentação do Bootstrap (variables)
+            https://getbootstrap.com/docs/5.3/components/accordion/
