@@ -790,3 +790,75 @@
 
           Estilo do Accordion: consultar documentação do Bootstrap (variables)
             https://getbootstrap.com/docs/5.3/components/accordion/
+
+        Cards
+          card (div pai)
+          card-header (filha da div card)
+          card-body (filha da div card)
+          card-footer (filha da div card)
+          card-title (filha da div card-body)
+          card-subtitle (filha da div card-body)
+          card-text (filha da div card-body)
+          card-link (filha da div card-body)
+          card-img-top/bottom (filha da div card)
+
+        Collapse
+          collapse (no conteúdo colapsável)
+          data-bs-toggle="collapse" (no elemento disparador do collapse)
+          data-bs-target="(identificador do conteúdo colapsável)" (no elemento disparador do collapse)
+
+        Modal
+          Aula de referência: https://programadorbr.club.hotmart.com/lesson/E4zdWB6D7l/modal
+
+          modal (div pai)
+          data-bs-toggle="modal" (no elemento disparador do modal)
+          data-bs-target="(identificar do modal)" (no elemento disparador do modal)
+          data-bs-dismiss="modal" (no elemento que irá fechar o modal)
+          modal-dialog (filha da div modal)
+          modal-dialog-centered (filha da div modal)
+          modal-dialog-scrollable (filha da div modal)
+          modal-content (filha da div modal-dialog)
+          modal-header (filha da div modal-content)
+          modal-title (filha da div modal-header)
+          modal-body (filha da div modal-content)
+          modal-footer (filha da div modal-content)
+
+        Carrossel
+          Aula de referência: https://programadorbr.club.hotmart.com/lesson/EOgWgaDEO6/carousel
+
+          carousel (div pai)
+          slide (div pai)
+          carousel-fade (div pai)
+          data-bs-ride="(carousel/true)" (div pai)
+          carousel-indicators (div filha da carousel)
+          data-bs-slide-to="(imagem)" (nos botões do carousel-indicators)
+          carousel-inner (div filha da carousel, container de todo o conteúdo do carrossel)
+          carousel-item (div filha da carousel-inner)
+          data-bs-interval="(tempo)" (nas divs carousel-item)
+          active (div filha da carousel-inner)
+          carousel-control-prev (no botão de "anterior" do carrossel)
+          data-bs-slide="prev" (no botão de "anterior" do carrossel)
+          carousel-control-prev-icon (no span do botão de "anterior" do carrossel)
+          carousel-control-next (no botão de "próximo" do carrossel)
+          data-bs-slide="next" (no botão de "próximo" do carrossel)
+          carousel-control-next-icon (no span do botão de "próximo" do carrossel)
+          data-bs-target="(identificar do carrossel)" (nos botões do carrossel)
+
+        Grupo de botões
+          btn-group, btn-group-vertical, role="group"
+
+        Dropdown menu
+          Aula de referência: https://programadorbr.club.hotmart.com/lesson/3ea5wyXBeg/dropdown
+
+          dropdown (div pai)
+          dropdown-center (div pai)
+          dropend (div pai)
+          dropstart (div pai)
+          dropup (div pai)
+          dropdown-toggle (no elemento disparador do menu)
+          data-bs-toggle="dropdown" (no elemento disparador do menu)
+          data-bs-auto-close="(true/false/inside/outside)" (no elemento disparador do menu)
+          dropdown-menu (no menu)
+          dropdown-menu-dark (no menu)
+          dropdown-item (nos itens do menu)
+          dropdown-divider (no hr dentro do menu)
