@@ -697,7 +697,7 @@
           margin-start e margin-end: px-(0 / 1 / 2 / 3 / 4 / 5)
 
         Container:
-          container
+          container, container-fluid
 
         Breakpoints:
           sm (min-width: 576px)
@@ -862,3 +862,95 @@
           dropdown-menu-dark (no menu)
           dropdown-item (nos itens do menu)
           dropdown-divider (no hr dentro do menu)
+
+        Nav
+          Aula de referência: https://programadorbr.club.hotmart.com/lesson/o4EDQmG9Oz/nav
+
+          nav (na tag ul da lista de links ou na tag nav)
+          nav-pills (na tag ul da lista de links ou na tag nav)
+          nav-tabs (na tag ul da lista de links ou na tag nav)
+          nav-fill (na tag ul da lista de links ou na tag nav)
+          nav-justified (na tag ul da lista de links ou na tag nav)    
+          nav-item (se for lista, usar em cada li da lista)
+          nav-link (em cada link)
+          disable (no link)
+
+        Navbar
+          Aula de referência: https://programadorbr.club.hotmart.com/lesson/M7qoDbqy4x/navbar
+
+          navbar (na tag nav)
+          navbar-expand-(breakpoint)
+          navbar-nav (na tag ul da lista de links)
+          navbar-(dark/light) (na tag nav)
+          navbar-brand (no link)
+          navbar-toggler (no botão disparador da navbar)
+          navbar-toggler-icon (no span do botão disparador da navbar)
+          navbar-collapse (na div pai da lista de links)
+          collapse (na div pai da lista de links)
+          data-bs-toggle="collapse" (na div pai da lista de links)
+          data-bs-target="(identificador da div pai da lista de links)" (na div pai da lista de links)
+
+        Icons
+          Adicionar ao HTML: <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+          Consultar lista de ícones no site do bootstrap: https://icons.getbootstrap.com/#icons
+
+        Tooltip (legendas pop-up para botões)
+          Aula de referência: https://getbootstrap.com/docs/5.3/components/tooltips/#variables
+
+          Adicionar o Popper ao HTML (antes do script do bootstrap): 
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+          Adicionar ao HTML (depois do script do bootstrap):
+            <script>
+              tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+              const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+            </script>
+
+          data-bs-toggle="tooltip" (no elemento)
+          data-bs-placement="(top/bottom/left/right)" (no elemento)
+          data-bs-title="(conteúdo da legenda)" (no elemento)
+
+          Customizar tooltip
+            Consultar variáveis do tooltip: https://getbootstrap.com/docs/5.3/components/tooltips/#variables
+
+            no CSS, modificar as variáveis através de uma classe:
+              Ex.: 
+                .modificar {
+                  --bs-tooltip-bg: red;
+                  --bs-tooltip-color: white;
+                }
+
+            Adicionar a classe no elemento HTML com a  seguinte propriedade:
+                data-bs-custom-class="modificar"
+                
+        Popover
+          Adicionar o Popper ao HTML (antes do script do bootstrap): 
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+          Adicionar ao HTML (depois do script do bootstrap): 
+            <script>
+              const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+              const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+            </script>
+
+          data-bs-toggle="popover" (no elemento)
+          data-bs-trigger="hover focus" (no elemento)
+          data-bs-content="(conteudo)" (no elemento)
+          data-bs-placement="(top/bottom/left/right)" (no elemento)
+          data-bs-title="(conteúdo da legenda)" (no elemento)
+          data-bs-html="true" (no elemento)
+
+          Customizar tooltip
+            Consultar variáveis do tooltip: https://getbootstrap.com/docs/5.3/components/popovers/#variables
+
+            no CSS, modificar as variáveis através de uma classe:
+              Ex.: 
+                .modificar {
+                  --bs-popover-bg: green;
+                  --bs-popover-header-bg: black;
+                  --bs-popover-header-color: white;
+                  --bs-popover-body-color: white;
+                }
+
+            Adicionar a classe no elemento HTML com a  seguinte propriedade:
+                data-bs-custom-class="modificar"  
