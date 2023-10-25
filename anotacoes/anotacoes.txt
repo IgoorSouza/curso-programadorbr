@@ -953,4 +953,105 @@
                 }
 
             Adicionar a classe no elemento HTML com a  seguinte propriedade:
-                data-bs-custom-class="modificar"  
+                data-bs-custom-class="modificar"
+
+    Node Express (expressjs.com)
+      Aula de referência (primeira aula do módulo de Express): https://programadorbr.club.hotmart.com/lesson/Mk7Qm8557y/instalando-o-express
+
+      Instalar o express no diretório através do terminal: 
+        npm init -y
+        npm install express
+
+      Importar o express (importa o módulo express):   
+        const express = require('express')
+
+      Inicializar o express (importa o objeto express):
+        const app = express()
+      
+      Ordenar que o express escute as requisições HTTP:
+        app.listen([porta], ()=>{
+          console.log("Servidor funcionando")
+        })
+
+      Importar módulo path ("monta" o caminho dos arquivos)
+        const path = require('path')  
+      
+      Servir arquivos estáticos: 
+        app.use(express.static(path.join('[diretório]', '[pasta]')))
+        app.use("[caminho]", express.static(path.join('[diretório]', '[pasta]')))
+          OBS.: usar __dirname para se referir ao diretório atual
+          OBS2.: este método sempre procura por um arquivo index.html na pasta
+          OBS3.: o [caminho] no segundo método se refere ao caminho que será necessário para acessar os arquivos
+
+      Métodos GET, POST, PUT e DELETE
+        app.get("[rota]", (req, res)=>{
+          //res.set("Content-Type", "text/html | text/plain | application/json")
+          //res.type("html | txt | json | png")
+          res.send("<h1>Hello World From GET</h1>")
+        })
+
+        app.post("[rota]", (req, res)=>{
+          //res.set("Content-Type", "text/html | text/plain | application/json")
+          //res.type("html | txt | json | png")
+          res.send("<h1>Hello World From POST</h1>")
+        })
+        
+        app.put("[rota]", (req, res)=>{
+          //res.set("Content-Type", "text/html | text/plain | application/json")
+          //res.type("html | txt | json | png")
+          res.send("<h1>Hello World From PUT</h1>")
+        })
+
+        app.delete("[rota]", (req, res)=>{
+          //res.set("Content-Type", "text/html | text/plain | application/json")
+          //res.type("html | txt | json | png")
+          res.send("<h1>Hello World From DELETE</h1>")
+        })
+
+      Middleware
+        É a parte que possui a requisição e a resposta
+        É possível passar vários middlewares para um método
+
+          Middleware = (req, res) => {}
+
+          Ex.:
+            let middleware = (req, res) => {
+              res.send("Hello World")
+            }
+
+            app.get("/", middleware)
+            app.post("/", middleware)
+
+        Parâmetro next: quando um método possui múltiplos middlewares, é necessário que os middlewares possuam o parâmetro next e que este seja chamado dentro de seu código para que os próximos middlewares sejam executados. Sempre que um next for chamado e receber parâmetros, ele retornará o erro informado no parâmetro e não prosseguirá para o próximo middleware.
+          Ex.:
+            let consoleMethod = (req, res, next) => {
+              console.log(req.method)
+              next()
+            }
+
+            let middleware = (req, res) => {
+              res.send("Hello World")
+            }
+
+            app.get("/", consoleMethod, middleware)
+
+      Método use
+        É um método global que é executado para qualquer tipo de requisição, seja ela GET, POST, PUT ou DELETE.
+
+      Body Parser
+        npm install body-parser
+        const bodyParser = require('body-parser')
+
+        bodyParser.json() (pegar dados do body em forma de json)
+        bodyParser.urlencoded(pegar dados do body em forma de formulário)
+
+      Métodos de requisição
+        req.body (conteúdo da requisição)
+        req.method (método da requisição)
+        req.query (query da requisição)
+        req.params (parâmetros da requisição)
+
+      Métodos de response
+        res.send (texto puro/html)
+        res.json (objetos json)
+        res.end (finalizar response)
