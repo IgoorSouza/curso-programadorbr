@@ -1043,7 +1043,15 @@
         const bodyParser = require('body-parser')
 
         bodyParser.json() (pegar dados do body em forma de json)
-        bodyParser.urlencoded(pegar dados do body em forma de formulário)
+        bodyParser.urlencoded (pegar dados do body em forma de formulário)
+
+      Router
+        Aula de referência: https://programadorbr.club.hotmart.com/lesson/2z7r3G9oOj/separando-as-rotas
+
+        const express = require('express')
+        const router = express.Router()
+
+        Permite a criação de rotas específicas.
 
       Métodos de requisição
         req.body (conteúdo da requisição)
@@ -1055,3 +1063,25 @@
         res.send (texto puro/html)
         res.json (objetos json)
         res.end (finalizar response)
+
+      Cors
+        nmp install cors
+        const cors = require('cors')
+ 
+        app.use(cors())
+        router.use(cors())
+
+      EJS
+        Aula de referência: https://programadorbr.club.hotmart.com/lesson/rRO9V82M4P/criando-um-template-na-mao
+
+        npm install ejs
+
+        app.set("views", path,join(__dirname, '[pasta]'))
+        app.set("view engine", "ejs")
+
+        render('[nome do arquivo]', { [variáveis a serem substituídas] })
+
+        Variáveis no HTML utilizando EJS:
+          render('index.html', { name: "Igor" })
+
+          <h1><%=name%></h1> == <h1>Igor</h1>
