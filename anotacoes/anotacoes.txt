@@ -1071,17 +1071,42 @@
         app.use(cors())
         router.use(cors())
 
-      EJS
-        Aula de referência: https://programadorbr.club.hotmart.com/lesson/rRO9V82M4P/criando-um-template-na-mao
+      EJS (Template Engines)
+        Aula de referência: https://programadorbr.club.hotmart.com/lesson/9M7GPnW9Ow/configurando-o-ejs
 
         npm install ejs
 
-        app.set("views", path,join(__dirname, '[pasta]'))
+        const path = require('path')
+
+        app.set("views", path.join(__dirname, '[pasta]'))
         app.set("view engine", "ejs")
 
-        render('[nome do arquivo]', { [variáveis a serem substituídas] })
+        res.render('[nome do arquivo]')
 
-        Variáveis no HTML utilizando EJS:
-          render('index.html', { name: "Igor" })
+        Substituir valores no HTML utilizando EJS:
+          Aula de referência: https://programadorbr.club.hotmart.com/lesson/j14onRV5Op/substituicao-de-variaveis
 
-          <h1><%=name%></h1> == <h1>Igor</h1>
+          res.render('[nome do arquivo]', { [valores a serem substituídos] })
+            Ex.: 
+              render('index.html', { name: "Igor" })
+
+              No arquivo HTML:
+                <h1><%=name%></h1>
+
+                OBS.: <%=%> quando o elemento deve ser mostrado na tela 
+                      <%%> quando o elemento NÃO deve ser mostrado na tela
+
+        Laço de repetição no EJS:
+          <% for() {%>
+            [código] 
+          <% } %>
+
+        Condição no EJS:
+          <% if() {%>
+            [código] 
+          <% } %>
+
+        Partials
+          Aula de referência: https://programadorbr.club.hotmart.com/lesson/zK4kK3Ro4Y/partials
+
+          Forma de simplificar a utilização de um mesmo código em várias partes do projeto    
