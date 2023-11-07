@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <title>Redirection</title>
+</head>
+<body>
+  <div class="container mt-4 w-75">
+    <h1 class="mb-4">Edit Link</h1>
+    <form action="/edit/<%=body.id%>" method="POST" class="mb-3">
+      <input class="field" name="title" placeholder="Title" required value="<%=body.title%>">
+      <input class="field" name="description" placeholder="Description" value="<%=body.description%>">
+      <input class="field" name="url" placeholder="URL" required value="<%=body.url%>">
+      <button>Edit</button>
+    </form>
+    <br>
+    <button><a style="text-decoration: none" href="/all">See links</button>
+
+    <%if(error){%>
+      <h3><%=error.message%></h3>
+    <%}%>
+  </div>
+</body>
+</html>
