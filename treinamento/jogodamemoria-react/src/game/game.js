@@ -1,5 +1,4 @@
 let game = {
-
     lockMode: false,
     firstCard: null,
     secondCard: null,
@@ -18,7 +17,6 @@ let game = {
     cards: null,
 
     setCard: function (id) {
-
         let card = this.cards.filter(card => card.id === id)[0];
         console.log(card);
         if (card.flipped || this.lockMode) {
@@ -35,7 +33,6 @@ let game = {
             this.lockMode = true;
             return true;
         }
-
     },
 
     checkMatch: function () {
@@ -57,12 +54,10 @@ let game = {
     },
 
     checkGameOver() {
-
         return this.cards.filter(card => !card.flipped).length == 0;
     },
 
     createCardsFromTechs: function () {
-
         this.cards = [];
 
         this.techs.forEach((tech) => {
@@ -74,7 +69,6 @@ let game = {
     },
 
     createPairFromTech: function (tech) {
-
         return [{
             id: this.createIdWithTech(tech),
             icon: tech,
@@ -84,7 +78,6 @@ let game = {
             icon: tech,
             flipped: false,
         }]
-
     },
 
     createIdWithTech: function (tech) {
@@ -96,29 +89,28 @@ let game = {
         let randomIndex = 0;
 
         while (currentIndex !== 0) {
-
             randomIndex = Math.floor(Math.random() * currentIndex);
-            currentIndex--;
+            currentIndex--
 
             [this.cards[randomIndex], this.cards[currentIndex]] = [this.cards[currentIndex], this.cards[randomIndex]]
         }
-
     },
 
-    flipCard: function(cardId, gameOverCallback, noMatchCallback) {
+    flipCard: function(cardId, gameOverCallBack, noMatchCallback) {
         if (this.setCard(cardId)) {
             if (this.secondCard) {
                 if (this.checkMatch()) {
-                    this.clearCards();
+                    this.clearCards()
+                    
                     if (this.checkGameOver()) {
-                        gameOverCallback()
+                        gameOverCallBack()
                     }
                 } else {
                     setTimeout(() => {
-                        this.unflipCards();
+                        this.unflipCards()
                         noMatchCallback()
-                    }, 1000);
-                };
+                    }, 1000)
+                }
             }
         }
     }
