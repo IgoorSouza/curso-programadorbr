@@ -1,1 +1,1 @@
-Curso front-end completo do professor Igor Oliveira do ProgramadorBr.
+Curso do professor Igor Oliveira do ProgramadorBr.
