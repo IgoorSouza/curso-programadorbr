@@ -1,0 +1,44 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #3e3e3eb0;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aulas {
+  list-style: none;
+  font-size: 22px;
+}
+
+.aulas li {
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav a {
+  color: white;
+}
+
+.aulas a {
+  color: black;
+}
