@@ -6,7 +6,10 @@ const aulas = [
 
 const nav = {
     name: "ProgBr",
-    links: ["Aulas", "Sobre"]
+    links: [
+      {name: "Aulas", link: "/aulas"}, 
+      {name: "Sobre", link: "/sobre"}, 
+    ]
 }
 
 export {aulas, nav}
