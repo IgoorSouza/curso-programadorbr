@@ -1,0 +1,278 @@
+@charset "UTF-8";
+
+#1 { grid-area: c1; }
+#2 { grid-area: c2; }
+#3 { grid-area: c3; }
+#4 { grid-area: c4; }
+#5 { grid-area: c5; }
+#6 { grid-area: c6; }
+#7 { grid-area: c7; }
+#8 { grid-area: c8; }
+#9 { grid-area: c9; }
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffd2707c;
+}
+
+#container {
+  display: flex;
+  width: 100vw;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#titulo {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 50px;
+  margin-top: 20px;
+}
+
+#jogo {
+  display: grid;
+  grid-template-areas: "c1 c2 c3" "c4 c5 c6" "c7 c8 c9";
+  grid-gap: 3px;
+  align-self: center;
+}
+
+#jogo div {
+  width: 100px;
+  height: 100px;
+  background-color: #ffcf99;
+  border: 2px solid black;
+}
+
+#jogo div:hover {
+  background-color: #fabd78;
+  cursor: pointer;
+}
+
+#jogo div img {
+  width: 100px;
+}
+
+#menu {
+  display: flex;
+  flex-flow: column wrap;
+  box-sizing: border-box;
+  background-color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  align-self: center;
+  border-radius: 20px;
+  padding: 15px;
+  width: 400px;
+  height: 250px;
+}
+
+#menu h1 {
+  font-size: 20px;
+  color: #eeae00;
+  text-align: center;
+}
+
+#menu p {
+  font-size: 13px;
+  margin: 10px 0px;
+  text-align: justify;
+}
+
+#tutorial {
+  width: 50%;
+  height: 50%;
+}
+
+#tutorial #starter {
+  text-align: center;
+  font-size: 16px;
+}
+
+#placar {
+  display: flex;
+  flex-flow: column;
+  width: 45%;
+  height: 100%;
+  align-self: center;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+#placar button {
+  background-color: #eeae00;
+  color: white;
+  width: 75%;
+  padding: 5px;
+  font-size: 14px;
+  border: none;
+  border-radius: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#placar button:hover {
+  cursor: pointer;
+  background-color: #e4a700;
+}
+
+#placar p, #placar .jogador1, .jogador2 {
+  font-size: 16px;
+}
+
+.jogador1 {
+  color: blue;
+}
+
+.jogador2 {
+  color: red;
+}
+
+#gameover {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.767);
+}
+
+#gameover h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  margin-bottom: 20px;
+}
+
+#again {
+  background-color: #eeae00;
+  color: white;
+  width: 150px;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#again:hover {
+  cursor: pointer;
+  background-color: #e4a700;
+}
+
+@media screen and (min-width: 700px) {
+  #jogo {
+    grid-gap: 5px;
+  }
+
+  #jogo div {
+    width: 150px;
+    height: 150px;
+  }
+
+  #jogo div img {
+    width: 150px;
+  }
+
+  #menu {
+    width: 450px;
+    height: 300px;
+  }
+
+  #menu h1 {
+    font-size: 24px;
+  }
+  
+  #menu p {
+    font-size: 16px;
+  }
+
+  #tutorial #starter {
+    font-size: 18px;
+  }
+  
+  #placar button {
+    padding: 8px;
+    font-size: 16px;
+  }
+
+  #placar p, #placar .jogador1, .jogador2 {
+    font-size: 18px;
+  }
+
+  #gameover h1 {
+    font-size: 3em;
+  }
+  
+  #again {
+    width: 250px;
+    padding: 15px;
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  #container {
+    flex-direction: row;
+  }
+
+  #jogo div {
+    width: 200px;
+    height: 200px;
+  }
+
+  #jogo div img {
+    width: 200px;
+  }
+
+  #menu {
+    flex-flow: row wrap;
+    width: 350px;
+    height: 602px;
+  }
+
+  #menu h1 {
+    font-size: 30px;
+  }
+  
+  #menu p {
+    font-size: 18px;
+  }
+
+  #tutorial, #placar {
+    width: 100%;
+    height: 50%;
+  }
+
+  #tutorial #starter {
+    font-size: 24px;
+  }
+
+  #placar p, #placar .jogador1, .jogador2 {
+    font-size: 24px;
+  }
+
+  #placar button {
+    padding: 10px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  #container {
+    width: 75%;
+  }
+
+  #menu {
+    width: 400px;
+  }
+}
