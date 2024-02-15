@@ -12,7 +12,7 @@ function Todo() {
   useEffect(() => {
     let savedItems = JSON.parse(localStorage.getItem("savedItems"))
     
-    if (savedItems.length != 0) {
+    if (savedItems && savedItems.length !== 0) {
       console.log(savedItems)
       setItems(savedItems)
     }
